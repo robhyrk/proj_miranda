@@ -12,5 +12,12 @@
     
 </section>
 
-
+<section class="about">
+    <div></div>
+    <div class="dark">
+        <!-- <img src="../../" -->
+    </div>
+    <div></div>
+    <div></div>
+</section>
 <?php get_footer();?>

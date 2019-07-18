@@ -107,6 +107,13 @@ header {
     border: 0;
     height: 1px; }
 
+.about {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr; }
+  .about .dark {
+    background: #313030; }
+
 /*!
  * Hamburgers
  * @description Tasty CSS-animated hamburgers
