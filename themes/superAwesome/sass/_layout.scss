@@ -3,3 +3,31 @@ Contains all the CSS that handles
 the layout, such as the container and any grid systems.
 */
 
+//NAV
+header{
+    background: $brand-color;
+    display: flex;
+    justify-content: flex-end;
+}
+
+//HERO
+
+.hero {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: calc(100vh - 56px);
+    background: 
+    url("../../images/logo.png") no-repeat 50% 40%,
+        linear-gradient(0deg, $brand-color, $brand-color);  
+    color: #fff;
+    h3 {
+        margin: 10% 5%;
+        font-style:italic;
+        span {
+            font-weight: 700;
+            font-style:normal;
+        }
+    }
+
+}
