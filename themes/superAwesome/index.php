@@ -1,7 +1,15 @@
 <?php get_header(); ?>
 
 <section class="hero">
-    <h3>"<span>Simplicty</span> is the soul of efficiency"</h3>
+    <div class="heroBlock">
+        <hr>
+        <div class="heroText">
+            <h3>" <span>Simplicty</span> is the soul of efficiency "</h3>
+            <span>- Austin Freeman</span>
+        </div>
+        <hr>
+    </div>
+    
 </section>
 
 
