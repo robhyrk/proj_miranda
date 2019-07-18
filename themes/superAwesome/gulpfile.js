@@ -13,7 +13,7 @@ const terser = require('gulp-terser');
 
 gulp.task('sass', function() {
   return gulp
-    .src('./sass/main.scss', { sourcemaps: true })
+    .src('./sass/style.scss', { sourcemaps: true })
     .pipe(sourcemaps.init())
     .pipe(prettyError())
     .pipe(sass())
@@ -24,7 +24,7 @@ gulp.task('sass', function() {
     )
     .pipe(gulp.dest('./'))
     .pipe(cssnano())
-    .pipe(rename('main.min.css'))
+    .pipe(rename('style.min.css'))
     .pipe(sourcemaps.write('../maps'))
     .pipe(gulp.dest('./build/css'));
 });
@@ -64,7 +64,7 @@ gulp.task('browser-sync', function() {
   ];
 
   browserSync.init(files, {
-    proxy: 'localhost/mirandagit'
+    proxy: 'localhost:8888/miranda'
   });
 
   gulp.watch(files).on('change', browserSync.reload);

@@ -1,7 +1,7 @@
 {
-  "name": "inhabitent",
+  "name": "superawesome",
   "version": "1.0.0",
-  "description": "Inhabitent theme.",
+  "description": "SuperAwesome Theme",
   "dependencies": {},
   "devDependencies": {
     "browser-sync": "^2.23.6",
