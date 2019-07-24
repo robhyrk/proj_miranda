@@ -22,7 +22,14 @@
         </div>
     </section>
     <section class="bottom">
-        <p>
+        <p>Graphic Designer from Toronto, Ontario.
+        I help business owners clarify their message with simplicity & good content. 
+        Directing and working with consumers for years to taking their personality 
+        and ideas and making something fresh and exciting.
+        </p>
+        <div class="btn">
+            <button>READ MORE</button>
+        </div>
     </section>
 </section>
 
