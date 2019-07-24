@@ -96,23 +96,47 @@ header {
     .hero h3 span {
       font-weight: 700;
       font-style: normal; }
-  .hero hr:nth-child(1) {
-    background-image: -webkit-gradient(linear, left top, right top, from(white), to(transparent));
-    background-image: linear-gradient(90deg, white, transparent);
-    border: 0;
-    height: 1px; }
   .hero hr {
     background-image: -webkit-gradient(linear, right top, left top, from(white), to(transparent));
     background-image: linear-gradient(-90deg, white, transparent);
     border: 0;
     height: 1px; }
+    .hero hr:nth-child(1) {
+      background-image: -webkit-gradient(linear, left top, right top, from(white), to(transparent));
+      background-image: linear-gradient(90deg, white, transparent); }
 
 .about {
   height: 100vh;
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr; }
-  .about .dark {
-    background: #313030; }
+  grid-template-rows: repeat(2, 1fr); }
+  .about .top {
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), color-stop(50%, #fff), color-stop(50%, #000), to(#000));
+    background: linear-gradient(#fff, #fff 50%, #000 50%, #000 100%);
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(5, 1fr); }
+    .about .top img {
+      max-width: 100%;
+      grid-column: 4 / 6;
+      grid-row: 1 / 3;
+      -ms-flex-item-align: end;
+          align-self: end; }
+    .about .top div {
+      grid-column: 2 / 4;
+      grid-row: 2 / 4;
+      -ms-flex-item-align: center;
+          align-self: center;
+      color: white; }
+      .about .top div p {
+        margin: 15% 0%; }
+      .about .top div hr {
+        background-image: -webkit-gradient(linear, right top, left top, from(white), to(transparent));
+        background-image: linear-gradient(-90deg, white, transparent);
+        border: 0;
+        height: 1px; }
+        .about .top div hr:nth-child(1) {
+          background-image: -webkit-gradient(linear, left top, right top, from(white), to(transparent));
+          background-image: linear-gradient(90deg, white, transparent); }
 
 /*!
  * Hamburgers

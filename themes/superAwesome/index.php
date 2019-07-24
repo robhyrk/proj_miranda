@@ -13,11 +13,17 @@
 </section>
 
 <section class="about">
-    <div></div>
-    <div class="dark">
-        <!-- <img src="../../" -->
-    </div>
-    <div></div>
-    <div></div>
+    <section class="top">
+        <img src="<?php echo get_template_directory_uri() . '/images/miranda.png';?>">
+        <div>
+            <hr>
+            <p>Helping brands grow through solution based marketing</p>
+            <hr>
+        </div>
+    </section>
+    <section class="bottom">
+        <p>
+    </section>
 </section>
+
 <?php get_footer();?>

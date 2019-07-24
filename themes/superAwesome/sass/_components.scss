@@ -2,4 +2,15 @@
 Anything reusable such as buttons, navbars, cards etc.
 */
 
-$brand-color: #313030;
+@mixin lines {  
+
+    hr {
+        background-image: linear-gradient(-90deg, white, transparent);
+        border: 0;
+        height: 1px;
+        &:nth-child(1) {
+            background-image: linear-gradient(90deg, white, transparent);
+        }
+    }
+    @content
+}
