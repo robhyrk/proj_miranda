@@ -33,4 +33,20 @@
     </section>
 </section>
 
+<section class="projects">
+    <div class="carousel">
+        <?php
+            $args = array(
+                'post_type'      => 'attachment',
+                'post_mime_type' => 'image',
+                'post_status'    => 'inherit',
+                'posts_per_page' => - 1,
+            );
+            $query = new WP_Query( $args );
+            foreach ( $query->posts as $img ) {
+                    echo "<div class='carousel-cell'><img src='" . wp_get_attachment_url( $img->ID ) . "'></div>";
+                }
+        ?>
+    </div>
+</section>
 <?php get_footer();?>
