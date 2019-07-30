@@ -34,6 +34,7 @@
 </section>
 
 <section class="projects">
+    <h2 class="underline">My Projects</h2>
     <div class="carousel">
         <?php
             $args = array(

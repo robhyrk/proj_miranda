@@ -92,6 +92,11 @@ header{
 }
 
 .projects{
-    height:100vh;
     display: grid;
+    .carousel {
+        margin: 4em 0em;
+    }
+    .is-fullscreen {
+        margin: 0;
+    }
 }

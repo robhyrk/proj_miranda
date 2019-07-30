@@ -55,6 +55,25 @@ html {
 /*
 Anything reusable such as buttons, navbars, cards etc.
 */
+h2 {
+  text-align: center;
+  font-size: 3em;
+  text-transform: uppercase;
+  position: relative; }
+  h2::after {
+    position: absolute;
+    height: 2px;
+    margin: 0 auto;
+    content: '';
+    left: 0;
+    right: 0;
+    width: 15%;
+    color: #000;
+    background-color: black;
+    left: 0;
+    bottom: -15px;
+    /* adjust this to move up and down. you may have to adjust the line height of the paragraph if you move it down a lot. */ }
+
 button {
   padding: 15px 10px;
   text-align: center;
@@ -162,8 +181,11 @@ header {
       text-align: center; }
 
 .projects {
-  height: 100vh;
   display: grid; }
+  .projects .carousel {
+    margin: 4em 0em; }
+  .projects .is-fullscreen {
+    margin: 0; }
 
 /*!
  * Hamburgers
@@ -431,4 +453,96 @@ https://flickity.metafizzy.co
 
 @media screen and (min-width: 768px) {
   .carousel-cell img {
-    height: 400px; } }
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover; } }
+
+/* position dots in carousel */
+.flickity-page-dots {
+  bottom: 10px; }
+
+/* white circles */
+.flickity-page-dots .dot {
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  background: transparent;
+  border: 2px solid white; }
+
+/* fill-in selected dot */
+.flickity-page-dots .dot.is-selected {
+  background: white; }
+
+/* Flickity fullscreen v1.0.1
+------------------------- */
+.flickity-enabled.is-fullscreen {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  padding-bottom: 35px;
+  z-index: 1; }
+
+.flickity-enabled.is-fullscreen .flickity-page-dots {
+  bottom: 10px; }
+
+.flickity-enabled.is-fullscreen .flickity-page-dots .dot {
+  background: white; }
+
+/* prevent page scrolling when flickity is fullscreen */
+html.is-flickity-fullscreen {
+  overflow: hidden; }
+
+/* ---- flickity-fullscreen-button ---- */
+.flickity-fullscreen-button {
+  display: block;
+  right: 10px;
+  top: 10px;
+  width: 24px;
+  height: 24px;
+  border-radius: 4px; }
+
+/* right-to-left */
+.flickity-rtl .flickity-fullscreen-button {
+  right: auto;
+  left: 10px; }
+
+.flickity-fullscreen-button-exit {
+  display: none; }
+
+.flickity-enabled.is-fullscreen .flickity-fullscreen-button-exit {
+  display: block; }
+
+.flickity-enabled.is-fullscreen .flickity-fullscreen-button-view {
+  display: none; }
+
+.flickity-fullscreen-button .flickity-button-icon {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  left: 4px;
+  top: 4px; }
+
+.carousel-cell {
+  width: 100%;
+  /* full width */
+  background: #222;
+  /* center images in cells with flexbox */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.carousel.is-fullscreen .carousel-cell {
+  height: 100%; }
+
+.carousel-cell img {
+  display: block;
+  max-height: 100%; }

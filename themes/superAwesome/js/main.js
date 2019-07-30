@@ -3,6 +3,8 @@ jQuery(document).ready(function($){
     var $carousel = $('.carousel').flickity({
         imagesLoaded: true,
         percentPosition: false,
+        fullscreen: true,
+        lazyLoad: 1
       });
       
       var $imgs = $carousel.find('.carousel-cell img');
