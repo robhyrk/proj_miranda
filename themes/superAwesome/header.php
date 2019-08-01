@@ -10,6 +10,19 @@
 
 <header>
     <nav>
+        <div class="menu">
+            <ul>
+                <a href="#about">
+                    <li>About</li>
+                </a>
+                <a href="#projects">
+                    <li>Work</li>
+                </a>
+                <a href="#contact">
+                    <li>Contact</li>
+                </a>
+            </ul>
+        </div>
         <button class="hamburger hamburger--3dx" type="button">
             <span class="hamburger-box">
             <span class="hamburger-inner"></span>

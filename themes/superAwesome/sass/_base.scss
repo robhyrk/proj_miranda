@@ -57,6 +57,7 @@ table {
 
 $brand-color: #313030;
 $margin-top: 4em 0;
+$mobile-text-padding: 2em;
 
 //FONTS
 
@@ -82,5 +83,8 @@ html {
     @content;
 }
 
-//Extends
+//GLOBAL
 
+html {
+	scroll-behavior: smooth;
+}

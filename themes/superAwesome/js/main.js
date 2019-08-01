@@ -1,5 +1,14 @@
 jQuery(document).ready(function($){
 
+  //nav menu
+  $( ".menu" ).hide();
+  $( ".hamburger" ).on("click", function() {
+    $( ".hamburger" ).toggleClass('is-active');
+    $( ".menu" ).slideToggle( 'fast', function(){
+    });
+  });
+  
+  //flickity
     var $carousel = $('.carousel').flickity({
         imagesLoaded: true,
         percentPosition: false,

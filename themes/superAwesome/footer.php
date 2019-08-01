@@ -1,6 +1,6 @@
 <footer>
 <p>“Whatever the mind can conceive & believe it can achieve”</p>
-    <div>
+    <div class="tagline">
         <p>QUESTIONS, OR REQUEST A QUOTE TODAY.</p>
         <p>QUICK TURNAROUND AND SERVICE.</p>
     </div>

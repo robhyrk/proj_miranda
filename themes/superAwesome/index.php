@@ -12,7 +12,7 @@
     
 </section>
 
-<section class="about">
+<section class="about" id="about">
     <section class="top">
         <img src="<?php echo get_template_directory_uri() . '/images/miranda.png';?>">
         <div>
@@ -27,13 +27,10 @@
         Directing and working with consumers for years to taking their personality 
         and ideas and making something fresh and exciting.
         </p>
-        <div class="btn">
-            <button>READ MORE</button>
-        </div>
     </section>
 </section>
 
-<section class="projects">
+<section class="projects" id="projects">
     <h2 class="underline">My Projects</h2>
     <div class="carousel">
     <?php
@@ -45,7 +42,7 @@
                 $portfolioImgs->the_post();?>
 
              <div class='carousel-cell'>
-                    <?php the_post_thumbnail('large'); ?>
+                    <?php the_post_thumbnail(array(400, 400)); ?>
              </div>
 
             <?php endwhile;?>
@@ -64,9 +61,9 @@
         <p>The overall goal is to reach higher levels. Our goal is not to maintain but to grow your company to its full potential.</p>
 </section>
 
-<section class="contact">
-    <section class="tagline">
-        <h3>Bring your umbrellas out,<br> lets brainstorm.</h3>
+<section class="contact" id="contact">
+<section class="tagline">
+        <h3>Bring your umbrellas out, lets brainstorm.</h3>
         <p>I would love opportunity to work with you on your next project, small or large I welcome all tasks.</p>
         <p>Schedule an appointment today or request a quote.</p>
     </section>
