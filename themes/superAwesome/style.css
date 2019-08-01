@@ -258,8 +258,7 @@ nav {
     -ms-flex-item-align: center;
         align-self: center; }
   .extra img {
-    min-height: 400px;
-    max-width: 300px; }
+    max-width: 500px; }
 
 .contact {
   margin: 4em 0; }
