@@ -64,4 +64,17 @@
         <p>The overall goal is to reach higher levels. Our goal is not to maintain but to grow your company to its full potential.</p>
 </section>
 
+<section class="contact">
+    <section class="tagline">
+        <h3>Bring your umbrellas out,<br> lets brainstorm.</h3>
+        <p>I would love opportunity to work with you on your next project, small or large I welcome all tasks.</p>
+        <p>Schedule an appointment today or request a quote.</p>
+    </section>
+    <section class="form">
+        <h2>Contact</h2>
+        <h3>Get Pricing and Free Marketing Plan</h3>
+        <?php echo do_shortcode( '[contact-form-7 id="24" title="Contact Me"]' );?>
+    </section>
+</section>
+
 <?php get_footer();?>
