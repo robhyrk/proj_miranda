@@ -52,4 +52,16 @@
         
     </div>
 </section>
+
+<section class="extra">
+    <h3>Peace of Mind</h3>
+    <hr>
+        <img src="<?php echo get_template_directory_uri() . '/images/yoga.png';?>">
+        <p>Restless nights and stressful days are now a thing of the past. Go to sleep and wake up in the morning with peace of mind knowing that your project is in good hands.</p>
+    <h3>Growth Gains</h3>
+    <hr>
+    <img src="<?php echo get_template_directory_uri() . '/images/moneybag.png';?>">
+        <p>The overall goal is to reach higher levels. Our goal is not to maintain but to grow your company to its full potential.</p>
+</section>
+
 <?php get_footer();?>
