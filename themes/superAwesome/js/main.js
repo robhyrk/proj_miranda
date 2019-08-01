@@ -4,7 +4,6 @@ jQuery(document).ready(function($){
         imagesLoaded: true,
         percentPosition: false,
         fullscreen: true,
-        lazyLoad: 1
       });
       
       var $imgs = $carousel.find('.carousel-cell img');

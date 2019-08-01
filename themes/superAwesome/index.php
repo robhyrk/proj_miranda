@@ -36,18 +36,20 @@
 <section class="projects">
     <h2 class="underline">My Projects</h2>
     <div class="carousel">
-        <?php
-            $args = array(
-                'post_type'      => 'attachment',
-                'post_mime_type' => 'image',
-                'post_status'    => 'inherit',
-                'posts_per_page' => - 1,
-            );
-            $query = new WP_Query( $args );
-            foreach ( $query->posts as $img ) {
-                    echo "<div class='carousel-cell'><img src='" . wp_get_attachment_url( $img->ID ) . "'></div>";
-                }
-        ?>
+    <?php
+            $portfolioImgs = new WP_Query(array(
+                'post_type' => 'portfolio',
+                'posts_per_page' => -1,
+            ));
+            while($portfolioImgs->have_posts()) :
+                $portfolioImgs->the_post();?>
+
+             <div class='carousel-cell'>
+                    <?php the_post_thumbnail('large'); ?>
+             </div>
+
+            <?php endwhile;?>
+        
     </div>
 </section>
 <?php get_footer();?>
