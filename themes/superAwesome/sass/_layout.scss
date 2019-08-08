@@ -4,7 +4,6 @@ the layout, such as the container and any grid systems.
 */
 
 
-
 //NAV
 header{
     background: $brand-color;
@@ -23,7 +22,7 @@ nav {
 }
 
 .menu{
-    z-index:1000000; 
+    z-index:100; 
     font-weight:bold; font-size:0.8em; 
     width:100%; background:#f1f1f1;  
     position:absolute; 
@@ -338,6 +337,7 @@ footer {
     align-items: center;
     line-height: 1.5em;
     font-size: 0.66em;
+
     @include desktop {
         font-size: 1em;
     }
@@ -367,6 +367,7 @@ footer {
 //Single Portfolio Page
 
 .single-portfolio  {
+    min-height: 100vh;
     .projects {
         justify-items: center;
             @include desktop {
@@ -401,6 +402,11 @@ footer {
                 grid-column: 1/3;
             }
         }
+    }
+    footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
     }
 }
 
