@@ -45,4 +45,23 @@ function superAwesome_features() {
 }
 
 add_action('after_setup_theme', 'superAwesome_features');
+
+function cpt() {
+    register_post_type('portfolio', array(
+        'show_in_rest' => true,
+        'supports' => array('title', 'editor', 'thumbnail'),
+        'public' => true,
+        'labels' => array(
+            'name' => 'Portfolio',
+            'add_new_item' => 'Add New Portfolio Item',
+            'edit_item' => 'Edit Portfolio Item',
+            'all_items' => 'All Portfolio Items',
+            'singular_name' => 'Portfolio'
+        ),
+        'menu_icon' => 'dashicons-portfolio'
+    ));
+}
+    
+    add_action('init', 'cpt');
+
 ?>
