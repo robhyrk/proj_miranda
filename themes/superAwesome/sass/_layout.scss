@@ -369,13 +369,11 @@ footer {
 .single-portfolio  {
     .projects {
         justify-items: center;
-        padding: 0 4em;
             @include desktop {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
             }
         h2 { 
-            margin: 0 0 2em 0;
             @include desktop {
                 grid-column: 1/3;
             }

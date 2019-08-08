@@ -12,13 +12,13 @@
     <nav>
         <div class="menu">
             <ul>
-                <a href="#about">
+                <a href="<?php echo is_home() ? '#about' : home_url('#about');?>">
                     <li>About</li>
                 </a>
-                <a href="#projects">
-                    <li>Work</li>
+                <a href="<?php echo is_home() ? '#projects' : home_url('#projects');?>">
+                    <li>Projects</li>
                 </a>
-                <a href="#contact">
+                <a href="<?php echo is_home() ? '#contact' : home_url('#contact');?>">
                     <li>Contact</li>
                 </a>
             </ul>
