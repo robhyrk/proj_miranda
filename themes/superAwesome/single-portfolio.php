@@ -12,5 +12,8 @@
                 ?>
 
             <?php endwhile;?>
+
+            <a href="<?php echo get_home_url()?>"><button>Back to Home</button></a>
+
 </section>
 <?php get_footer();?>
