@@ -56,8 +56,13 @@ table {
 //VARS
 
 $brand-color: #313030;
+
 $margin-top: 4em 0;
+
 $mobile-text-padding: 2em;
+$desktop-text-padding: 4em 8em;
+
+$desktop-breakpoint: 1024px;
 
 //FONTS
 
@@ -66,10 +71,6 @@ html {
 }
 
 //MIXINS
-
-@mixin underline {
-
-}
 
 @mixin lines {  
     hr {
@@ -81,6 +82,12 @@ html {
         }
     }
     @content;
+}
+
+@mixin desktop {
+	@media (min-width: $desktop-breakpoint) {
+		@content
+	}
 }
 
 //GLOBAL

@@ -119,16 +119,23 @@ nav {
             align-self: end;
             justify-self: end;
             overflow:hidden;
+            @include desktop {
+                max-width: 50%;
+            }
         }
         div {
             grid-column: 2 / 4;
             grid-row: 2 / 4;
             align-self: center;
             color: white;
+            @include desktop {
+                grid-column: 2 / 5;
+                font-size: 1.5em;
+            }
             p {
                 margin: 15% 0%;
             }
-            @include lines
+            @include lines;
         }
     }
     .bottom {
@@ -139,6 +146,9 @@ nav {
             align-self: center;
             padding: 2em;
             text-align: center;
+            @include desktop {
+                padding: $desktop-text-padding;
+            }
         }
         .btn {
             grid-row: 3 / 5;
@@ -153,6 +163,29 @@ nav {
     display: grid;
     .carousel {
         margin: 4em 0em;
+        &::after {
+            content: 'flickity';
+            display: none; /* hide :after */ 
+        }
+        @include desktop {
+            display:grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: 1fr;
+            grid-gap:1em;
+            background: white;
+            padding: 1em;
+            .carousel-cell {
+                background: transparent;
+                border: solid 1px $brand-color;
+                img {
+                    width:100%;
+                    object-fit: contain;
+                }
+            }
+            &::after {
+                content: '';
+            }
+        }
     }
     .is-fullscreen {
         margin: 0;
@@ -163,21 +196,30 @@ nav {
     display: grid;
     justify-items: center;
     grid-template-columns: 1fr;
-    // grid-template-columns: 40% 60%;
+    @include desktop {
+        padding: $desktop-text-padding;
+        grid-template-columns: 40% 60%;
+    }
+    
 
     hr {
-        width: 80%;
+        width: 90%;
         background: grey;
         height: 1px;
-        // grid-column: 1 / 3;
+        @include desktop {
+        grid-column: 1 / 3;
+        }
     }
     h3 {
         font-family: 'Damion', cursive;
         font-size: 2.5em;
-    //     min-width: 300px;
-    //     grid-column: 1 / 2;
-    //     justify-self: end;
-    //     text-align: center;
+        @include desktop {
+            min-width: 300px;
+            grid-column: 1 / 2;
+            justify-self: end;
+            text-align: center;
+            padding: 1em 0 0.5em 0;
+        }
 
     }
     p {
@@ -185,10 +227,16 @@ nav {
         text-align: center;
         line-height: 2em;
         align-self: center;
+        @include desktop {
+            padding: $desktop-text-padding;
+        }
     }
     img {
         max-width: 500px;
-
+        @include desktop {
+            justify-self: end;
+            align-self: center;
+        }
     }
 }
 
@@ -201,14 +249,32 @@ nav {
             url("../../images/brainstorm.jpg") no-repeat 50% 50%,
             linear-gradient(0deg, $brand-color, $brand-color); 
         background-size: 66%, auto;
+        @include desktop {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            padding: $desktop-text-padding;
+            min-height: 400px;
+            background: 
+            url("../../images/brainstorm.jpg") no-repeat left center,
+            linear-gradient(0deg, $brand-color, $brand-color); 
+            background-size: 33%, auto;
+            text-align: start;
+        }
         h3 {
             font-size: 2.5em;
             color: white;
+            @include desktop {
+                grid-column: 3 / 6;
+                font-size: 4em;
+            }
         }
         p {
         line-height: 1.5em;
         margin-top: 1.5em;
         color: rgb(157, 157, 157);
+        @include desktop {
+            grid-column: 3 / 6;
+            }
         }
     }
     .form{
@@ -220,6 +286,13 @@ nav {
         }
     }
 }
+
+div.wpcf7 {
+    @include desktop {
+        padding: $desktop-text-padding;
+    }
+}
+
 .wpcf7-form {
     font-family: 'Lato';
     width: 75%;
@@ -228,6 +301,9 @@ nav {
     text-align: center;
     box-shadow:5px 10px 20px 10px rgba(0,0,0,0.75);
     padding: 10% 5%;
+    @include desktop {
+        padding: $desktop-text-padding;
+    }
     p {
         width: 100%;
         font-size: 2em;
@@ -262,14 +338,24 @@ footer {
     align-items: center;
     line-height: 1.5em;
     font-size: 0.66em;
+    @include desktop {
+        font-size: 1em;
+    }
     p {
         grid-column: 1/3;
+        @include desktop {
+            grid-column: 1/2;
+        }
 
     }
     .tagline {
         grid-column: 1/3;
         border: solid 1px white;
         margin: 1.5em 0;
+        @include desktop {
+            grid-column: 2/2;
+            border: none;
+        }
     }
     span {
         grid-column: 1/3;
@@ -277,3 +363,26 @@ footer {
         
     }
 }
+
+//Single Portfolio Page
+
+.single-portfolio  {
+    .projects {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        padding: 0 4em;
+    }
+    h2 {
+        grid-column: 1/3;
+        margin: 1em 0;
+    }
+    img {
+
+    }
+    p {
+        padding: 1em;
+    }
+}
+
+

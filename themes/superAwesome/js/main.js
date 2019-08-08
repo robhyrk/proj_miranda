@@ -12,6 +12,7 @@ jQuery(document).ready(function($){
     var $carousel = $('.carousel').flickity({
         imagesLoaded: true,
         percentPosition: false,
+        watchCSS: true,
         fullscreen: true,
       });
       

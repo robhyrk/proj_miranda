@@ -22,7 +22,7 @@
         </div>
     </section>
     <section class="bottom">
-        <p>Graphic Designer from Toronto, Ontario.
+        <p>Graphic Designer from Toronto, Ontario.<br>
         I help business owners clarify their message with simplicity & good content. 
         Directing and working with consumers for years to taking their personality 
         and ideas and making something fresh and exciting.
@@ -34,19 +34,18 @@
     <h2 class="underline">My Projects</h2>
     <div class="carousel">
     <?php
-            $portfolioImgs = new WP_Query(array(
-                'post_type' => 'portfolio',
-                'posts_per_page' => -1,
-            ));
-            while($portfolioImgs->have_posts()) :
-                $portfolioImgs->the_post();?>
+        $portfolioImgs = new WP_Query(array(
+            'post_type' => 'portfolio',
+            'posts_per_page' => 9,
+        ));
+        while($portfolioImgs->have_posts()) :
+            $portfolioImgs->the_post();?>
 
-             <div class='carousel-cell'>
-             <a href="<?php the_permalink();?>"><?php the_post_thumbnail(array(400, 400)); ?></a>
-                    
-             </div>
+            <div class='carousel-cell'>
+            <a href="<?php the_permalink();?>"><?php the_post_thumbnail(array(400, 400)); ?></a> 
+            </div>
 
-            <?php endwhile;?>
+        <?php endwhile;?>
         
     </div>
 </section>
