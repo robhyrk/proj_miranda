@@ -42,7 +42,8 @@
                 $portfolioImgs->the_post();?>
 
              <div class='carousel-cell'>
-                    <?php the_post_thumbnail(array(400, 400)); ?>
+             <a href="<?php the_permalink();?>"><?php the_post_thumbnail(array(400, 400)); ?></a>
+                    
              </div>
 
             <?php endwhile;?>
