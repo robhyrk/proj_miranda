@@ -32,7 +32,8 @@ nav {
 .menu{
     z-index:1; 
     font-weight:bold; font-size:0.8em; 
-    width:100%; background:#f1f1f1;  
+    width:100%; 
+    background:#f1f1f1;  
     position:absolute; 
     text-align:center; 
     font-size:1.5em;
@@ -406,9 +407,8 @@ footer {
             }
         }
         img {
-            width: 100%;
+            max-width: 100%;
             object-fit: contain;
-            padding: 2em;
             @include desktop {
                 grid-column: 1/2;
             }
@@ -429,9 +429,11 @@ footer {
             }
         }
     }
+    .portfolio-img {
+        max-width: 100%;
+    }
     footer {
-        width: 100%;
-        align-self: flex-end;
+        max-width: 100%;
     }
 }
 
