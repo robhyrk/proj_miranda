@@ -72,13 +72,7 @@
     <section class="form" id="contact">
         <h2>Contact</h2>
         <h3>Get Pricing and Free Marketing Plan</h3>
-        <?php 
-        $idNum = 0;
-        for($x = 0; $x <= 100; $x++) {
-             $idNum = $x;
-        }
-        echo do_shortcode( "[contact-form-7 id='{$idNum}' title='Contact Me']" );
-        ?>
+        <?php echo do_shortcode( '[contact-form-7 id="16" title="Contact Me"]' );?>
     </section>
 </section>
 
