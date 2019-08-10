@@ -41,7 +41,7 @@ access_log
 
 # Ignore everything in "plugins" except certain plugins. #
 # ========================================================== #
-plugins/*
+plugins/
 
 # Ignore everything in "themes" except the active theme and asset files. #
 # ========================================================== #
