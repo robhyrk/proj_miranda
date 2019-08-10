@@ -4,9 +4,23 @@ jQuery(document).ready(function($){
   $( ".menu" ).hide();
   $( ".hamburger" ).on("click", function() {
     $( ".hamburger" ).toggleClass('is-active');
+    $( "#navbar" ).toggleClass('sticky');
     $( ".menu" ).slideToggle( 'fast', function(){
     });
   });
+
+// window.onscroll = function() {stickyNav()};
+
+// const navbar = document.getElementById("navbar");
+// const sticky = navbar.offsetTop;
+
+// function stickyNav() {
+//   if (window.pageYOffset >= sticky) {
+//     navbar.classList.add("sticky")
+//   } else {
+//     navbar.classList.remove("sticky");
+//   }
+// }
   
   //flickity
     var $carousel = $('.carousel').flickity({

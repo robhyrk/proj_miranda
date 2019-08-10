@@ -6,23 +6,31 @@ the layout, such as the container and any grid systems.
 
 //NAV
 header{
-    background: $brand-color;
+    background: rgba(49, 48, 48, 0.33);
+    position: fixed;
+    top:0;
+    width: 100%;
+    z-index: 1;
 }
 
 nav {
-    width: 100%;
     display: flex;
     justify-content: flex-end;
     .hamburger {
         margin: 1em;
+        border: solid 2px $brand-color;
     }
     .hamburger-inner:after, .hamburger-inner:before{
         background: #f1f1f1 !important;
     }
 }
 
+.sticky {
+    background: $brand-color;
+}
+
 .menu{
-    z-index:100; 
+    z-index:1; 
     font-weight:bold; font-size:0.8em; 
     width:100%; background:#f1f1f1;  
     position:absolute; 
@@ -72,7 +80,7 @@ nav {
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    min-height: calc(100vh - 56px);
+    min-height: 100vh;
     background: 
     url("../../images/logo.png") no-repeat 50% 40%,
         linear-gradient(0deg, $brand-color, $brand-color);
@@ -242,15 +250,26 @@ nav {
 .contact {
     margin: $margin-top;
     .tagline {
+        display: grid;
+        justify-items: center;
+        min-height: 350px;
         padding: $mobile-text-padding;
         text-align: center;
         background: 
-            url("../../images/brainstorm.jpg") no-repeat 50% 50%,
+            url("../../images/brainstorm.jpg") no-repeat center center,
             linear-gradient(0deg, $brand-color, $brand-color); 
         background-size: 66%, auto;
+        .tagText {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            grid-column: 3 / 7;
+            
+        }
         @include desktop {
             display: grid;
             grid-template-columns: repeat(6, 1fr);
+            grid-column: 3 / 6;
             padding: $desktop-text-padding;
             min-height: 400px;
             background: 
@@ -367,8 +386,15 @@ footer {
 //Single Portfolio Page
 
 .single-portfolio  {
+    position: relative;
+    top:112px;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
     .projects {
+        flex:1;
+        top: 112px;
         justify-items: center;
             @include desktop {
                 display: grid;
@@ -404,9 +430,8 @@ footer {
         }
     }
     footer {
-        position: fixed;
-        bottom: 0;
         width: 100%;
+        align-self: flex-end;
     }
 }
 

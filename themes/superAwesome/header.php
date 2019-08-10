@@ -9,8 +9,8 @@
 <body <?php body_class();?>>
 
 <header>
-    <nav>
-        <div class="menu">
+    <nav id="navbar">
+        <div class="menu" >
             <ul>
                 <a href="<?php echo is_home() ? '#about' : home_url('#about');?>">
                     <li>About</li>

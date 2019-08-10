@@ -62,10 +62,12 @@
 </section>
 
 <section class="contact">
-<section class="tagline">
-        <h3>Bring your umbrellas out, lets brainstorm.</h3>
-        <p>I would love opportunity to work with you on your next project, small or large I welcome all tasks.</p>
-        <p>Schedule an appointment today or request a quote.</p>
+    <section class="tagline">
+        <div class="tagText">
+            <h3>Bring your umbrellas out, lets brainstorm.</h3>
+            <p>I would love opportunity to work with you on your next project, small or large I welcome all tasks.</p>
+            <p>Schedule an appointment today or request a quote.</p>
+        </div>
     </section>
     <section class="form" id="contact">
         <h2>Contact</h2>
