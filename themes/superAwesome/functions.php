@@ -4,9 +4,7 @@
 add_filter('show_admin_bar', '__return_false');
 
 
-/**
- * Filter the stylesheet_uri to output the minified CSS file.
- */
+//Filter the stylesheet_uri to output the minified CSS file
 function superAwesone_minified_css( $stylesheet_uri, $stylesheet_dir_uri ) {
 	if ( file_exists( get_template_directory() . '/build/css/style.min.css' ) ) {
 		$stylesheet_uri = $stylesheet_dir_uri . '/build/css/style.min.css';
@@ -16,10 +14,8 @@ function superAwesone_minified_css( $stylesheet_uri, $stylesheet_dir_uri ) {
 }
 add_filter( 'stylesheet_uri', 'superAwesone_minified_css', 10, 2 );
 
-/**
- * Stylesheets and other things.
- */
 
+//Stylesheets, scripts, and plugins/CDNs
 function uni_files() {
     // wp_enqueue_script('main_uni_js', get_theme_file_uri('/js/scripts-bundled.js'), NULL, microtime(), true);
     wp_enqueue_script('jquery');
@@ -40,6 +36,7 @@ function uni_files() {
 
 add_action('wp_enqueue_scripts', 'uni_files');
 
+//Theme setup
 function superAwesome_features() {
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
@@ -47,6 +44,21 @@ function superAwesome_features() {
 
 add_action('after_setup_theme', 'superAwesome_features');
 
+//Initialize widget
+function miranda_widgets_init() {
+	register_sidebar( array(
+		'name'          => esc_html( 'Contact Form' ),
+		'id'            => 'contact-form',
+		'description'   => 'Copy the shortcode from Contact Form 7 and paste it here. Drag and drop the "Text" widget block here and paste the shortcode inside the text area.',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+}
+add_action( 'widgets_init', 'miranda_widgets_init' );
+
+//Portfolio CPT
 function cpt() {
     register_post_type('portfolio', array(
         'show_in_rest' => true,

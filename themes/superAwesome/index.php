@@ -72,7 +72,7 @@
     <section class="form" id="contact">
         <h2>Contact</h2>
         <h3>Get Pricing and Free Marketing Plan</h3>
-        <?php echo do_shortcode( '[contact-form-7 id="16" title="Contact Me"]' );?>
+        <?php dynamic_sidebar( 'contact-form' ); ?>
     </section>
 </section>
 
