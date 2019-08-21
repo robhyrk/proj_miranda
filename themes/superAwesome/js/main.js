@@ -9,18 +9,14 @@ jQuery(document).ready(function($){
     });
   });
 
-// window.onscroll = function() {stickyNav()};
+  //toggles text on/off in about me section
+  const $readBtn = $(".bottom button")
+  $( ".bottom .textwidget" ).hide();
+  $readBtn.on("click", function() {
+    $( ".read-more .textwidget" ).toggle();
+    $readBtn.html() === 'Read More' ? $readBtn.text('Show Less') : $readBtn.text('Read More')
+    });
 
-// const navbar = document.getElementById("navbar");
-// const sticky = navbar.offsetTop;
-
-// function stickyNav() {
-//   if (window.pageYOffset >= sticky) {
-//     navbar.classList.add("sticky")
-//   } else {
-//     navbar.classList.remove("sticky");
-//   }
-// }
   
   //flickity
     var $carousel = $('.carousel').flickity({
@@ -45,5 +41,4 @@ jQuery(document).ready(function($){
           img.style[ transformProp ] = 'translateX(' + x  + 'px)';
         });
       });
-
-})
+    });

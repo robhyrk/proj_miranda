@@ -17,16 +17,18 @@
         <img src="<?php echo get_template_directory_uri() . '/images/miranda.png';?>">
         <div>
             <hr>
-            <p>Helping brands grow through solution based marketing</p>
+            <h3>Helping brands grow through solution based marketing</p>
             <hr>
         </div>
     </section>
     <section class="bottom">
-        <p>Graphic Designer from Toronto, Ontario.<br>
-        I help business owners clarify their message with simplicity & good content. 
-        Directing and working with consumers for years to taking their personality 
-        and ideas and making something fresh and exciting.
+        <p>Hello, my name is Ryan Miranda.<br>
+I am a Graphic Designer from Toronto, Ontario.<br>
+Helping business’ clarify their message with simplicity &amp; good content.
+Directing and working with consumers for years to taking their personality and ideas and making something fresh and exciting.
         </p>
+        <div class="read-more"><?php dynamic_sidebar( 'about-me-read-more' ); ?></div>
+        <button>Read More</button>
     </section>
 </section>
 

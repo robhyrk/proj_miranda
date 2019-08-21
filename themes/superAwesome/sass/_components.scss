@@ -28,10 +28,17 @@ button {
     text-align: center;
     background: $brand-color;
     color: white;
-    font-size: 1.1rem;
+	font-size: 1.1rem;
+	width: 150px;
+	justify-self: center;
 }
 
 p {
     font-size: 1.15em;
     line-height: 2em;
+}
+
+h3 {
+	font-size: 2em;
+    line-height: 2.5em;
 }

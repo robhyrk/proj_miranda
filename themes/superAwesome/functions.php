@@ -54,6 +54,15 @@ function miranda_widgets_init() {
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
+    ) );
+    register_sidebar( array(
+		'name'          => esc_html( 'About Me - Read More' ),
+		'id'            => 'about-me-read-more',
+		'description'   => 'Add your copy here for the "Read More" section in About Me. Drag and drop the "Text" widget here to add your copy.',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
 	) );
 }
 add_action( 'widgets_init', 'miranda_widgets_init' );
