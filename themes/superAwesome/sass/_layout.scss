@@ -21,7 +21,7 @@ nav {
         border: solid 2px $brand-color;
     }
     .hamburger-inner:after, .hamburger-inner:before{
-        background: #f1f1f1 !important;
+        background: #fff !important;
     }
 }
 
@@ -85,17 +85,17 @@ nav {
     background: 
     url("../../images/logo.png") no-repeat 50% 40%,
         linear-gradient(0deg, $brand-color, $brand-color);
-    background-size: 50%, auto;
+    // background-size: 50%, auto;
     color: #fff;
     text-align: center;
     .heroBlock {
         margin: 2em 0;
+        width: 100%;
     }
     .heroText {
-        margin: 5% 0%;
+        margin: 2em 0;
     }
     span {
-        margin-top: 5%;
         display: inline-block;
     }
     h3 {
@@ -113,18 +113,18 @@ nav {
 //ABOUT
 
 .about {
-    min-height: 100vh;
-    display: grid;
+    // min-height: 100vh;
+    // display: grid;
     // grid-template-rows: repeat(2, 1fr);
     .top {
         background: $brand-color;
         display: grid;
-        grid-template-rows: 1fr 3fr;
+        grid-template-rows: 1fr 4fr;
         grid-template-columns: repeat(6,1fr);
-        padding: 4em 0 0 0;
-        img {
+        padding: 2em 0 0 0;
+        .cutout {
             max-width: 60%;
-            grid-column: 3 / 7;
+            grid-column: 2 / 7;
             grid-row: 1 / 3;
             align-self: end;
             justify-self: end;
@@ -133,11 +133,22 @@ nav {
                 max-width: 50%;
             }
         }
-        div {
-            grid-column: 2 / 4;
-            grid-row: 2 / 4;
-            align-self: center;
+        h3 {
+            font-size:1em;
+            margin: 1em 0;
+            @include desktop {
+                font-size:1.5em;
+                line-height:1.5em;
+            }
+        }
+        .slogan {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            grid-column: 1 / 5;
+            grid-row: 1 / 3;
             color: white;
+            margin: 0 2em;
             @include desktop {
                 grid-column: 2 / 5;
                 font-size: 1.5em;
@@ -145,10 +156,12 @@ nav {
             p {
                 margin: 15% 0%;
             }
-            &::before {
-                content: url("../../images/logo.png");
-            }
             @include lines;
+        }
+        .aboutLogo {
+            width: 25%;
+            margin: 1em 0;
+            align-self:center;
         }
     }
     .bottom {
@@ -182,14 +195,15 @@ nav {
         }
         @include desktop {
             display:grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-auto-rows: 1fr;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            // grid-auto-rows: 1fr 1fr;
             grid-gap:1em;
             background: white;
             padding: 1em;
             .carousel-cell {
                 background: transparent;
-                border: solid 1px $brand-color;
+                height: 100%;
                 img {
                     width:100%;
                     object-fit: contain;
@@ -197,6 +211,15 @@ nav {
             }
             &::after {
                 content: '';
+            }
+            .carousel-cell:nth-child(3n+1) {
+                grid-row: 1 / 3;
+            }
+            .carousel-cell:nth-child(3n+2) {
+                grid-row: 1 / 2;
+            }
+            .carousel-cell:nth-child(3n+3) {
+                grid-row: 2 / 3;
             }
         }
     }
@@ -213,14 +236,14 @@ nav {
         padding: $desktop-text-padding;
         grid-template-columns: 40% 60%;
     }
-    
-
-    hr {
-        width: 90%;
-        background: grey;
-        height: 1px;
+    .headline-extra {
+        position: relative;
+        bottom:30px;
+        color:grey;
+    }
+    .extraText {
         @include desktop {
-        grid-column: 1 / 3;
+            grid-column: 1 / 3;
         }
     }
     h3 {
@@ -263,7 +286,7 @@ nav {
         text-align: center;
         background: 
             url("../../images/brainstorm.jpg") no-repeat center center,
-            linear-gradient(0deg, $brand-color, $brand-color); 
+            linear-gradient(-90deg, $brand-color,  rgb(60, 60, 60)); 
         background-size: 66%, auto;
         .tagText {
             display: flex;
@@ -280,12 +303,13 @@ nav {
             min-height: 400px;
             background: 
             url("../../images/brainstorm.jpg") no-repeat left center,
-            linear-gradient(0deg, $brand-color, $brand-color); 
+            linear-gradient(-90deg, $brand-color,  rgb(60, 60, 60)); 
             background-size: 33%, auto;
             text-align: start;
         }
         h3 {
             font-size: 2.5em;
+            line-height: 1em;
             color: white;
             @include desktop {
                 grid-column: 3 / 6;
@@ -320,13 +344,15 @@ div.wpcf7 {
 .wpcf7-form {
     font-family: 'Lato';
     width: 75%;
-    margin: auto;
+    margin: 4em auto;
     display: block;
     text-align: center;
-    box-shadow:5px 10px 20px 10px rgba(0,0,0,0.75);
+    box-shadow:0px 0px 4px 1px rgba(0,0,0,0.33);
     padding: 10% 5%;
+    
     @include desktop {
         padding: $desktop-text-padding;
+        width: 50%;
     }
     p {
         width: 100%;
@@ -354,20 +380,27 @@ div.wpcf7 {
 footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    background: $brand-color;
+    background:  linear-gradient(-90deg, $brand-color, #222222);
     color: white;
     padding: $mobile-text-padding;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
     line-height: 1.5em;
     font-size: 0.66em;
+    aside {
+        text-align: start;
+        justify-self:end;
+    }
+    img {
+        width: 25%;
+        @include desktop {
+            width: 5%;
+        }
+    }
 
     @include desktop {
         font-size: 1em;
+        padding: 2em 8em;
     }
     p {
-        grid-column: 1/3;
         @include desktop {
             grid-column: 1/2;
         }

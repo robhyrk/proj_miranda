@@ -59,7 +59,7 @@ $brand-color: #000;
 
 $margin-top: 4em 0;
 
-$mobile-text-padding: 2em;
+$mobile-text-padding: 2.5em;
 $desktop-text-padding: 4em 8em;
 
 $desktop-breakpoint: 1024px;
@@ -72,21 +72,34 @@ html {
 
 //MIXINS
 
-@mixin lines {  
-    hr {
-        background-image: linear-gradient(-90deg, white, transparent);
+@mixin lines { 
+	.gradLine1 {
+		background-image: linear-gradient(-90deg, white, transparent);
+		border:0;
+		position: relative;
+		height: 1px;
+		@include desktop {
+			width:40%;
+			margin: 0 2em;
+		}
+	} 
+    .gradLine2 {
+		background-image: linear-gradient(90deg, white, transparent);
+		position: relative;
         border: 0;
-        height: 1px;
-        &:nth-child(1) {
-            background-image: linear-gradient(90deg, white, transparent);
-        }
-    }
+		height: 1px;
+		@include desktop {
+			width:40%;
+			left:30%;
+		}
+	}
+
     @content;
 }
 
 @mixin desktop {
 	@media (min-width: $desktop-breakpoint) {
-		@content
+		@content;
 	}
 }
 

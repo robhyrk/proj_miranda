@@ -1,10 +1,9 @@
 <footer>
-<p>“Whatever the mind can conceive & believe it can achieve”</p>
-    <div class="tagline">
-        <p>QUESTIONS, OR REQUEST A QUOTE TODAY.</p>
-        <p>QUICK TURNAROUND AND SERVICE.</p>
+    <div class="footerLogo">
+        <img class="aboutLogo" src="<?php echo get_template_directory_uri() . '/images/logo-cropped.png';?>">
+        <p>Ryan Miranda &copy; <?php echo date("Y")?></p>
     </div>
-<span>Ryan Miranda &copy; <?php echo date("Y")?></span>
+    <?php dynamic_sidebar( 'footer' ); ?>
 </footer>    
 
 <?php wp_footer();?>

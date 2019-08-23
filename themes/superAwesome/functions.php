@@ -63,6 +63,24 @@ function miranda_widgets_init() {
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
+    ) );
+    register_sidebar( array(
+		'name'          => esc_html( 'Footer' ),
+		'id'            => 'footer',
+		'description'   => 'Add your copy here for the footer section. Drag and drop the "Text" widget here to add your copy.',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+    ) );
+    register_sidebar( array(
+		'name'          => esc_html( 'Featured' ),
+		'id'            => 'featured',
+		'description'   => 'Add your copy or image here for the featured section. Drag and drop the "Text" or "Image" widget here.',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
 	) );
 }
 add_action( 'widgets_init', 'miranda_widgets_init' );
