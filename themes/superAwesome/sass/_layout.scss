@@ -253,7 +253,7 @@ nav {
             min-width: 300px;
             grid-column: 1 / 2;
             justify-self: end;
-            text-align: center;
+            text-align: start;
             padding: 1em 0 0.5em 0;
         }
 
@@ -264,13 +264,14 @@ nav {
         line-height: 2em;
         align-self: center;
         @include desktop {
-            padding: $desktop-text-padding;
+            padding: 0;
+            text-align:start;
         }
     }
     img {
         max-width: 500px;
         @include desktop {
-            justify-self: end;
+            justify-self: center;
             align-self: center;
         }
     }

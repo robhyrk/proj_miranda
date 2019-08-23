@@ -372,7 +372,7 @@ nav {
         min-width: 300px;
         grid-column: 1 / 2;
         justify-self: end;
-        text-align: center;
+        text-align: start;
         padding: 1em 0 0.5em 0; } }
   .extra p {
     padding: 2.5em;
@@ -382,12 +382,13 @@ nav {
         align-self: center; }
     @media (min-width: 1024px) {
       .extra p {
-        padding: 4em 8em; } }
+        padding: 0;
+        text-align: start; } }
   .extra img {
     max-width: 500px; }
     @media (min-width: 1024px) {
       .extra img {
-        justify-self: end;
+        justify-self: center;
         -ms-flex-item-align: center;
             align-self: center; } }
 
