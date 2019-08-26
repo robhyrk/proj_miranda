@@ -38,18 +38,21 @@
     <?php
         $portfolioImgs = new WP_Query(array(
             'post_type' => 'portfolio',
-            'posts_per_page' => 9,
+            'posts_per_page' => 12,
         ));
         while($portfolioImgs->have_posts()) :
             $portfolioImgs->the_post();?>
 
             <div class='carousel-cell'>
-            <a href="<?php the_permalink();?>"><?php the_post_thumbnail(array(400, 400)); ?></a> 
+                <a href="<?php the_permalink();?>"><?php the_post_thumbnail(array(400, 400)); ?></a> 
             </div>
 
         <?php endwhile;?>
     </div>
+    <button>Load More</button>
+
 </section>
+
 
 <section class="extra">
         <div class="extraText">
