@@ -25,7 +25,19 @@ jQuery(document).ready(function($){
     $loadBtn.html() === 'Load More' ? $loadBtn.text('Show Less') : $loadBtn.text('Load More')
     });
 
-  //change input field text
+  //shows/hide 'load more' button based on screen width
+  if ($(window).width() < 1024) {
+      $loadBtn.hide();
+  }
+  $(window).resize(function() {
+    if ($(window).width() < 1024) {
+        $loadBtn.hide();
+    } else if ($(window).width() >= 1024) {
+      $loadBtn.show();
+  }
+  });
+
+  //changes input functionality for attachments to display icon and custom text
   $("input[type='file']").hide();
   $(".attach").click(function () {
     $("input[type='file']").trigger('click');
