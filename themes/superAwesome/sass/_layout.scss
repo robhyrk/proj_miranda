@@ -441,12 +441,12 @@ footer {
     img {
         width: 25%;
         @include desktop {
-            width: 5%;
+            width: 15%;
         }
     }
 
     @include desktop {
-        font-size: 1em;
+        font-size: 0.75em;
         padding: 2em 8em;
     }
     p {

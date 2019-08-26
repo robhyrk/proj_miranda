@@ -536,10 +536,10 @@ footer {
     width: 25%; }
     @media (min-width: 1024px) {
       footer img {
-        width: 5%; } }
+        width: 15%; } }
   @media (min-width: 1024px) {
     footer {
-      font-size: 1em;
+      font-size: 0.75em;
       padding: 2em 8em; } }
   @media (min-width: 1024px) {
     footer p {
