@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<section class="projects" id="projects">
+<section class="projects-single" id="projects">
     <?php
 
             while( have_posts() ) :

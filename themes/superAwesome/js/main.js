@@ -11,11 +11,20 @@ jQuery(document).ready(function($){
 
   //toggles text on/off in about me section
   const $readBtn = $(".bottom button")
-  $( ".bottom .textwidget" ).hide();
+  $( ".read-more" ).hide();
   $readBtn.on("click", function() {
-    $( ".read-more .textwidget" ).toggle();
+    $( ".read-more" ).slideToggle('slow');
     $readBtn.html() === 'Read More' ? $readBtn.text('Show Less') : $readBtn.text('Read More')
     });
+
+  //change input field text
+  // $("input[type='file']").prop('value', 'Attach');
+  // console.log($("input[type='file']"))
+
+  $("input[type='file']").hide();
+  $(".attach").click(function () {
+    $("input[type='file']").trigger('click');
+});
 
   
   //flickity

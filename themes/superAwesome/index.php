@@ -25,11 +25,7 @@
         </div>
     </section>
     <section class="bottom">
-        <p>Hello, my name is Ryan Miranda.<br>
-I am a Graphic Designer from Toronto, Ontario.<br>
-Helping business’ clarify their message with simplicity &amp; good content.
-Directing and working with consumers for years to taking their personality and ideas and making something fresh and exciting.
-        </p>
+        <div class="about-me-text"><?php dynamic_sidebar( 'about-me' ); ?></div>
         <div class="read-more"><?php dynamic_sidebar( 'about-me-read-more' ); ?></div>
         <button>Read More</button>
     </section>
@@ -56,18 +52,19 @@ Directing and working with consumers for years to taking their personality and i
 </section>
 
 <section class="extra">
-    <div class="extraText">  
-        <h3>Peace</h3>
-        <span class="headline-extra">of mind</span>
-    </div>  
+        <div class="extraText">
+            <h3>Peace</h3>
+            <span class="headline-extra">of mind</span>
+        </div>
         <img src="<?php echo get_template_directory_uri() . '/images/yoga.png';?>">
         <p>Restless nights and stressful days are now a thing of the past. Go to sleep and wake up in the morning with peace of mind knowing that your project is in good hands.</p>
+    </div>  
     <hr class="break">
     <div class="extraText"> 
         <h3>Growth</h3>
     </div>
     <img src="<?php echo get_template_directory_uri() . '/images/moneybag.png';?>">
-        <p>The overall goal is to reach higher levels. Our goal is not to maintain but to grow your company to its full potential.</p>
+    <p>The overall goal is to reach higher levels. Our goal is not to maintain but to grow your company to its full potential.</p>
 </section>
 
 <section class="contact">
