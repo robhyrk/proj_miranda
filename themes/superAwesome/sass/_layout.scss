@@ -179,6 +179,8 @@ nav {
             text-align: center;
             @include desktop {
                 padding: $desktop-text-padding;
+                max-width: 40%;
+                margin: 0 auto;
             }
         }
         .btn {
@@ -452,6 +454,7 @@ footer {
     aside {
         text-align: start;
         justify-self:end;
+        align-self:end;
     }
     img {
         width: 25%;

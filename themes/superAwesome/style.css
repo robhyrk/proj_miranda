@@ -395,7 +395,9 @@ nav {
     text-align: center; }
     @media (min-width: 1024px) {
       .about .bottom p {
-        padding: 4em 8em; } }
+        padding: 4em 8em;
+        max-width: 40%;
+        margin: 0 auto; } }
   .about .bottom .btn {
     grid-row: 3 / 5;
     -ms-flex-item-align: center;
@@ -627,7 +629,9 @@ footer {
   font-size: 0.66em; }
   footer aside {
     text-align: start;
-    justify-self: end; }
+    justify-self: end;
+    -ms-flex-item-align: end;
+        align-self: end; }
   footer img {
     width: 25%; }
     @media (min-width: 1024px) {
