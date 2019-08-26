@@ -57,7 +57,7 @@
 <section class="extra">
         <div class="extraText">
             <h3>Peace</h3>
-            <span class="headline-extra">of mind</span>
+            <span class="headline-extra">OF MIND</span>
         </div>
         <img src="<?php echo get_template_directory_uri() . '/images/yoga.png';?>">
         <p>Restless nights and stressful days are now a thing of the past. Go to sleep and wake up in the morning with peace of mind knowing that your project is in good hands.</p>
