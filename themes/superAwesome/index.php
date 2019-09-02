@@ -27,7 +27,8 @@
     <section class="bottom">
         <div class="about-me-text"><?php dynamic_sidebar( 'about-me' ); ?></div>
         <div class="read-more"><?php dynamic_sidebar( 'about-me-read-more' ); ?></div>
-        <button>Read More</button>
+        <button>READ MORE</button>
+        <div class="dots">. . .</div>
     </section>
 </section>
 

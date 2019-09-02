@@ -9,11 +9,21 @@ jQuery(document).ready(function($){
     });
   });
 
+  $( ".menu ul a li" ).on("click",  function() {
+    $( ".hamburger" ).toggleClass('is-active');
+    
+    $('.menu').toggle()
+  });
+
+  $('textarea').addClass('notes')
+  $('textarea').attr('rows', '5')
+
   //toggles text on/off in about me section
   const $readBtn = $(".bottom button")
   $( ".read-more" ).hide();
   $readBtn.on("click", function() {
     $( ".read-more" ).slideToggle('slow');
+    $('.dots').slideToggle('slow');
     $readBtn.html() === 'Read More' ? $readBtn.text('Show Less') : $readBtn.text('Read More')
     });
 

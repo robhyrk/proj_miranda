@@ -6,7 +6,7 @@ the layout, such as the container and any grid systems.
 
 //NAV
 header{
-    background: rgba(0, 0, 0, 0.1);
+    // background: rgba(0, 0, 0, 0.05);
     position: fixed;
     top:0;
     width: 100%;
@@ -18,15 +18,11 @@ nav {
     justify-content: flex-end;
     .hamburger {
         margin: 1em;
-        border: solid 2px $brand-color;
+        // border: solid 2px $brand-color;
     }
-    .hamburger-inner:after, .hamburger-inner:before{
-        background: #fff !important;
+    .hamburger-inner, .hamburger-inner:after, .hamburger-inner:before{
+        background: lightgrey !important;
     }
-}
-
-.sticky {
-    background: $brand-color;
 }
 
 .menu{
@@ -36,9 +32,12 @@ nav {
     background:#f1f1f1;  
     position:absolute; 
     text-align:center; 
-    font-size:1.5em;
+    font-size:1.25em;
     top: 56px;
     margin-top: 1em;
+    @include desktop {
+        font-size: 1.5em;
+    }
     ul {
         margin: 0; 
         padding: 0; 
@@ -47,8 +46,11 @@ nav {
     }   
     li {
         display: block;   
-        padding:15px 0 15px 0; 
+        padding: 7.5px 0; 
         border-bottom:#dddddd 1px solid;
+        @include desktop {
+            padding: 15px 0;
+        }
     }
     li:hover{
         display: block;    
@@ -93,20 +95,25 @@ nav {
         width: 100%;
     }
     .heroText {
-        margin: 2em 0;
+        margin: 2em 1em;
+        @include desktop {
+            margin: 2em 0;
+        }
     }
     span {
         display: inline-block;
     }
     h3 {
         font-family: "Gill Sans Std Light Italic";
-        font-size: 2em;
+        font-size: 1.25em;
         line-height:2em;
         &>span {
             font-family: "Gill Sans Std Bold";
             color:white;
         }
-        
+        @include desktop {
+            font-size: 2em;
+        }
     }
     span {
         color: grey;
@@ -194,10 +201,16 @@ nav {
             }
         }
     }
+    .dots {
+        font-size: 3em;
+        text-align: center;
+        font-family: 'Gill Sans Std';
+        margin: 1em 0;
+    }
 }
 
 .projects{
-    margin: $margin-top;
+    margin: 4em 0;
     display: grid;
     button {
         grid-row: 5 / 6;
@@ -215,7 +228,7 @@ nav {
             display:grid;
             grid-template-columns: repeat(4, 1fr);
             grid-template-rows: repeat(2, 1fr);
-            grid-gap:1em;
+            grid-gap:0.5em;
             background: white;
             padding: 1em;
             .carousel-cell {
@@ -227,7 +240,8 @@ nav {
                     object-fit: cover;
                 }
                 a {
-                    height:100%
+                    height:100%;
+                    width:100%;
                 }
             }
             &::after {
@@ -282,6 +296,7 @@ nav {
             grid-column: 2 / 3;
             width: 50%;
             justify-self: start;
+            align-self:end;
             padding: 0 0 0 5em;
             span {
                 font-size: 0.8em;
@@ -308,7 +323,7 @@ nav {
         @include desktop {
             padding:  0 0 4em 4em;
             text-align:start;
-            width: 50%;
+            width: 66%;
             justify-self: start;
         }
     }
@@ -325,11 +340,15 @@ nav {
             }
         }
     }
+    .break {
+        height: 0.1px;
+    }
 }
 
 .contact {
-    margin: $margin-top;
+    margin: 6em 0;
     .tagline {
+        margin-bottom: 12em;
         display: grid;
         justify-items: center;
         min-height: 350px;
@@ -386,16 +405,28 @@ nav {
             font-size: 1.25em;
         }
         .attach {
+            max-width: 150px;
+            margin: 1em 3em;
             cursor: pointer;
             font-size:1.2em;
             color: grey;
             text-align: start;
             align-self:start;
+            text-align: center;
+            align-self:center;
+            margin: 1em;
+            max-width: 100%;
             &+ p {
             margin-top:0;
             }
             &::before {
                 content: url(../../images/paperclip.png);
+            }
+            @include desktop {
+                max-width: 150px;
+                margin: 1em 3em;
+                text-align: start;
+                align-self:start;
             }
         }
     }
@@ -414,33 +445,57 @@ div.wpcf7 {
     display: block;
     text-align: center;
     box-shadow:0px 0px 4px 1px rgba(0,0,0,0.33);
-    padding: 10% 5%;
-    
-    @include desktop {
-        padding: $desktop-text-padding;
-        width: 50%;
+    // padding: 10% 5%;
+    .form-area {
+        color: grey;
+        font-family: 'Helvetica Neue LT Pro';
+        margin: 1.5em 0;
+        @include desktop{
+            display: flex;
+            margin: 2em 3em;
+        }
+        .form-text {
+            font-size:1.25em;
+            width: 150px;
+            text-align: start;
+            display: inline;
+        }
     }
-    p {
-        width: 100%;
-        font-size: 2em;
-        margin: 1em 0;
+    .notes {
+        background-attachment: local;
+        background-image:
+            linear-gradient(to right, white 10px, transparent 10px),
+            linear-gradient(to left, white 10px, transparent 10px),
+            repeating-linear-gradient(white, white 60px, grey 60px, grey 61px, white 61px);
+        line-height: 62px;
+        padding: 4px 5px;
+    }
+        padding: 0.5em 1em;
+
         label, input, span, textarea {
             width:100%;
             border: none;
         }
-        input, textarea {
-            border-bottom: solid 1px $brand-color;
-            font-size: 0.5em;
+        input {
+            border-bottom: solid 1px grey;
+        }
+        input,textarea {
+            font-size:1.25em;
+        }
+        .line {
+            width: calc(100% - 2em);
+            background: black;
+            height: 1px;
         }
         input[type="submit"] {
             width: 200px;
+            margin: 2em 0;
             background: $brand-color;
             color: white;
             text-transform: uppercase;
-            padding: 0.75em 0.75em;
+            padding: 0.25em;
             cursor: pointer;
         }
-    }
 }
 
 footer {
