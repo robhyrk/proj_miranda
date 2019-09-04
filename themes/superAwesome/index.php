@@ -67,7 +67,7 @@ Directing and working with consumers for years to taking their personality and i
         <h3>Growth</h3>
     </div>
     <img src="<?php echo get_template_directory_uri() . '/images/moneybag.png';?>">
-        <p>The overall goal is to reach higher levels. Our goal is not to maintain but to grow your company to its full potential.</p>
+        <p class="xtra">The overall goal is to reach higher levels. Our goal is not to maintain but to grow your company to its full potential.</p>
 </section>
 
 <section class="contact">

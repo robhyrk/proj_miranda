@@ -234,7 +234,9 @@ nav {
     grid-template-columns: 1fr;
     @include desktop {
         padding: $desktop-text-padding;
-        grid-template-columns: 40% 60%;
+        grid-template-columns: 2fr 3fr;
+        grid-template-rows: repeat(4, 1fr);
+        justify-items: start;
     }
     .headline-extra {
         position: relative;
@@ -243,7 +245,13 @@ nav {
     }
     .extraText {
         @include desktop {
-            grid-column: 1 / 3;
+            grid-column: 2 / 3;
+            grid-row: 3 / 4;
+            align-self: end;
+            &:nth-child(1) {
+                grid-row: 1 / 2;
+
+            }
         }
     }
     h3 {
@@ -254,7 +262,6 @@ nav {
             grid-column: 1 / 2;
             justify-self: end;
             text-align: start;
-            padding: 1em 0 0.5em 0;
         }
 
     }
@@ -266,13 +273,35 @@ nav {
         @include desktop {
             padding: 0;
             text-align:start;
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+            align-self: start;
+            width: 66%;
         }
     }
+
+    .xtra  {
+        @include desktop {
+            grid-row: 4 / 6; 
+            }
+    }
+
+    .break {
+        grid-row: 3;
+    }
+
     img {
         max-width: 500px;
+        &:nth-child(2) {
+            @include desktop {
+                grid-row: 1 / 3;
+            }
+        }
         @include desktop {
             justify-self: center;
             align-self: center;
+            grid-row: 3 / 6;
+            grid-column: 1 / 2;
         }
     }
 }
