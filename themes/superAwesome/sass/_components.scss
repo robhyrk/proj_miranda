@@ -22,7 +22,7 @@ a {
 .break {
 	width: calc(100% - 2em);
 	background: black;
-	height: 2px;
+	height: 0.01px;
 	@include desktop {
 	grid-column: 1 / 3;
 	}

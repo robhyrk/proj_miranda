@@ -42,7 +42,9 @@
             'posts_per_page' => 12,
         ));
         while($portfolioImgs->have_posts()) :
-            $portfolioImgs->the_post();?>
+            $portfolioImgs->the_post();
+            
+            ?>
 
             <div class='carousel-cell'>
                 <a href="<?php the_permalink();?>"><?php the_post_thumbnail(array(400, 400)); ?></a> 
@@ -50,7 +52,7 @@
 
         <?php endwhile;?>
     </div>
-    <button>Load More</button>
+    <?php echo (wp_count_posts('portfolio')->publish > 6) ? '<button>LOAD MORE</button>' : '' ;?>
 
 </section>
 

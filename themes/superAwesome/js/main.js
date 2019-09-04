@@ -7,6 +7,13 @@ jQuery(document).ready(function($){
     $( "#navbar" ).toggleClass('sticky');
     $( ".menu" ).slideToggle( 'fast', function(){
     });
+    // $( ".hamburger" ).toggle();
+
+        //   $('body:not(header > *)').on('click', function() {
+    //     $( ".hamburger" ).toggle();
+    //     $( ".menu" ).slideToggle( 'fast', function(){
+    //   });
+    // })
   });
 
   $( ".menu ul a li" ).on("click",  function() {
@@ -24,7 +31,7 @@ jQuery(document).ready(function($){
   $readBtn.on("click", function() {
     $( ".read-more" ).slideToggle('slow');
     $('.dots').slideToggle('slow');
-    $readBtn.html() === 'Read More' ? $readBtn.text('Show Less') : $readBtn.text('Read More')
+    $readBtn.html() === 'READ MORE' ? $readBtn.text('SHOW LESS') : $readBtn.text('READ MORE')
     });
 
   //loads grid project content on/off
@@ -32,7 +39,7 @@ jQuery(document).ready(function($){
   $( ".carousel-cell:nth-child(n+7)" ).hide();
   $loadBtn.on("click", function() {
     $( ".carousel-cell:nth-child(n+7)" ).slideToggle('slow');
-    $loadBtn.html() === 'Load More' ? $loadBtn.text('Show Less') : $loadBtn.text('Load More')
+    $loadBtn.html() === 'LOAD MORE' ? $loadBtn.text('SHOW LESS') : $loadBtn.text('LOAD MORE')
     });
 
   //shows/hide 'load more' button based on screen width
@@ -51,7 +58,11 @@ jQuery(document).ready(function($){
   $("input[type='file']").hide();
   $(".attach").click(function () {
     $("input[type='file']").trigger('click');
-});
+  });
+  $("input[type='file']").on('change', function(event) {
+    $('p.attach-notice').remove()
+    $('.attach').append(`<p class="attach-notice">You've selected: ${event.target.files[0].name}</p>`)
+  });
 
   
   //flickity

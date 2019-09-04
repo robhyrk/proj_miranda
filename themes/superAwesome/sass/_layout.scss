@@ -17,7 +17,7 @@ nav {
     display: flex;
     justify-content: flex-end;
     .hamburger {
-        margin: 1em;
+        // margin: 1em;
         // border: solid 2px $brand-color;
     }
     .hamburger-inner, .hamburger-inner:after, .hamburger-inner:before{
@@ -26,15 +26,15 @@ nav {
 }
 
 .menu{
-    z-index:1; 
+    z-index:0; 
     font-weight:bold; font-size:0.8em; 
     width:100%; 
     background:#f1f1f1;  
     position:absolute; 
     text-align:center; 
     font-size:1.25em;
-    top: 56px;
-    margin-top: 1em;
+    // top: 56px;
+    // margin-top: 1em;
     @include desktop {
         font-size: 1.5em;
     }
@@ -91,7 +91,7 @@ nav {
     color: #fff;
     text-align: center;
     .heroBlock {
-        margin: 2em 0;
+        margin: 5em 0;
         width: 100%;
     }
     .heroText {
@@ -179,6 +179,9 @@ nav {
     }
     .bottom {
         display: grid;
+        .textwidget {
+            margin: 2em 0 0 0;
+        }
         p {
             grid-row: 1 / 3;
             align-self: center;
@@ -186,7 +189,7 @@ nav {
             text-align: center;
             @include desktop {
                 padding: $desktop-text-padding;
-                max-width: 40%;
+                max-width: 50%;
                 margin: 0 auto;
             }
         }
@@ -210,7 +213,7 @@ nav {
 }
 
 .projects{
-    margin: 4em 0;
+    margin: 6em 0;
     display: grid;
     button {
         grid-row: 5 / 6;
@@ -249,27 +252,27 @@ nav {
             }
             .carousel-cell:nth-child(3n+1) {
                 grid-row: 1 / 3;
-                max-height: calc(500px + 1em) ;
+                height: calc(500px + 1em) ;
             }
             .carousel-cell:nth-child(3n+2) {
                 grid-row: 1 / 2;
-                max-height: 250px;
+                height: 250px;
             }
             .carousel-cell:nth-child(3n+3) {
                 grid-row: 2 / 3;
-                max-height: 250px;
+                height: 250px;
             }
             .carousel-cell:nth-child(3n+7) {
                 grid-row: 4 / 6;
-                max-height: calc(500px + 1em) ;
+                height: calc(500px + 1em) ;
             }
             .carousel-cell:nth-child(3n+8) {
                 grid-row: 4 / 5;
-                max-height: 250px;
+                height: 250px;
             }
             .carousel-cell:nth-child(3n+9) {
                 grid-row: 5 / 6;
-                max-height: 250px;
+                height: 250px;
             }
         }
     }
@@ -284,9 +287,9 @@ nav {
     grid-template-columns: 1fr;
     @include desktop {
         padding: $desktop-text-padding;
-        grid-template-columns: 2fr 3fr;
-        grid-template-rows: repeat(4, 1fr);
-        justify-items: start;
+        grid-template-columns: 40% 60%;
+        // grid-template-rows: repeat(4, 1fr);
+        // justify-items: start;
     }
     .headline-extra {
         position: relative;
@@ -359,7 +362,7 @@ nav {
         }
     }
     .break {
-        height: 0.1px;
+        height: 0.01px;
     }
 }
 
@@ -441,7 +444,7 @@ nav {
                 content: url(../../images/paperclip.png);
             }
             @include desktop {
-                max-width: 150px;
+                // max-width: 150px;
                 margin: 1em 3em;
                 text-align: start;
                 align-self:start;
@@ -475,9 +478,15 @@ div.wpcf7 {
         .form-text {
             font-size:1.25em;
             width: 150px;
-            text-align: start;
+            text-align: center;
             display: inline-block;
+            @include desktop {
+                text-align: start;
+            }
         }
+    }
+    .attach-notice{
+        font-size: 0.66em;
     }
     .notes {
         background-attachment: local;
