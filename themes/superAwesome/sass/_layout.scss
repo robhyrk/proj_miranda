@@ -6,7 +6,7 @@ the layout, such as the container and any grid systems.
 
 //NAV
 header{
-    background: rgba(49, 48, 48, 0.1);
+    // background: rgba(0, 0, 0, 0.05);
     position: fixed;
     top:0;
     width: 100%;
@@ -18,15 +18,11 @@ nav {
     justify-content: flex-end;
     .hamburger {
         margin: 1em;
-        border: solid 2px $brand-color;
+        // border: solid 2px $brand-color;
     }
-    .hamburger-inner:after, .hamburger-inner:before{
-        background: #fff !important;
+    .hamburger-inner, .hamburger-inner:after, .hamburger-inner:before{
+        background: lightgrey !important;
     }
-}
-
-.sticky {
-    background: $brand-color;
 }
 
 .menu{
@@ -36,9 +32,12 @@ nav {
     background:#f1f1f1;  
     position:absolute; 
     text-align:center; 
-    font-size:1.5em;
+    font-size:1.25em;
     top: 56px;
     margin-top: 1em;
+    @include desktop {
+        font-size: 1.5em;
+    }
     ul {
         margin: 0; 
         padding: 0; 
@@ -47,8 +46,11 @@ nav {
     }   
     li {
         display: block;   
-        padding:15px 0 15px 0; 
+        padding: 7.5px 0; 
         border-bottom:#dddddd 1px solid;
+        @include desktop {
+            padding: 15px 0;
+        }
     }
     li:hover{
         display: block;    
@@ -93,18 +95,29 @@ nav {
         width: 100%;
     }
     .heroText {
-        margin: 2em 0;
+        margin: 2em 1em;
+        @include desktop {
+            margin: 2em 0;
+        }
     }
     span {
         display: inline-block;
     }
     h3 {
-        font-style:italic;
-        font-size: 2em;
-        span {
-            font-weight: 700;
-            font-style:normal;
+        font-family: "Gill Sans Std Light Italic";
+        font-size: 1.25em;
+        line-height:2em;
+        &>span {
+            font-family: "Gill Sans Std Bold";
+            color:white;
         }
+        @include desktop {
+            font-size: 2em;
+        }
+    }
+    span {
+        color: grey;
+        letter-spacing:1px;
     }
     @include lines
 
@@ -166,7 +179,6 @@ nav {
     }
     .bottom {
         display: grid;
-        grid-template-rows: repeat(2, 1fr);
         p {
             grid-row: 1 / 3;
             align-self: center;
@@ -174,6 +186,8 @@ nav {
             text-align: center;
             @include desktop {
                 padding: $desktop-text-padding;
+                max-width: 40%;
+                margin: 0 auto;
             }
         }
         .btn {
@@ -181,24 +195,40 @@ nav {
             align-self: center;
             text-align: center;
         }
+        .read-more p{
+            @include desktop {
+            padding: 0em 8em 4em 8em;
+            }
+        }
+    }
+    .dots {
+        font-size: 3em;
+        text-align: center;
+        font-family: 'Gill Sans Std';
+        margin: 1em 0;
     }
 }
 
 .projects{
-    margin: $margin-top;
+    margin: 4em 0;
     display: grid;
+    button {
+        grid-row: 5 / 6;
+        max-width: 150px;
+        justify-self:center;
+    }
     .carousel {
         margin: 4em 0em;
         &::after {
             content: 'flickity';
             display: none; /* hide :after */ 
         }
+ 
         @include desktop {
             display:grid;
             grid-template-columns: repeat(4, 1fr);
             grid-template-rows: repeat(2, 1fr);
-            // grid-auto-rows: 1fr 1fr;
-            grid-gap:1em;
+            grid-gap:0.5em;
             background: white;
             padding: 1em;
             .carousel-cell {
@@ -206,7 +236,12 @@ nav {
                 height: 100%;
                 img {
                     width:100%;
-                    object-fit: contain;
+                    height:100%;
+                    object-fit: cover;
+                }
+                a {
+                    height:100%;
+                    width:100%;
                 }
             }
             &::after {
@@ -214,12 +249,27 @@ nav {
             }
             .carousel-cell:nth-child(3n+1) {
                 grid-row: 1 / 3;
+                max-height: calc(500px + 1em) ;
             }
             .carousel-cell:nth-child(3n+2) {
                 grid-row: 1 / 2;
+                max-height: 250px;
             }
             .carousel-cell:nth-child(3n+3) {
                 grid-row: 2 / 3;
+                max-height: 250px;
+            }
+            .carousel-cell:nth-child(3n+7) {
+                grid-row: 4 / 6;
+                max-height: calc(500px + 1em) ;
+            }
+            .carousel-cell:nth-child(3n+8) {
+                grid-row: 4 / 5;
+                max-height: 250px;
+            }
+            .carousel-cell:nth-child(3n+9) {
+                grid-row: 5 / 6;
+                max-height: 250px;
             }
         }
     }
@@ -246,22 +296,24 @@ nav {
     .extraText {
         @include desktop {
             grid-column: 2 / 3;
-            grid-row: 3 / 4;
-            align-self: end;
-            &:nth-child(1) {
-                grid-row: 1 / 2;
-
+            width: 50%;
+            justify-self: start;
+            align-self:end;
+            padding: 0 0 0 5em;
+            span {
+                font-size: 0.8em;
             }
         }
     }
     h3 {
-        font-family: 'Damion', cursive;
+        font-family: 'Kaufmann Std';
         font-size: 2.5em;
         @include desktop {
             min-width: 300px;
             grid-column: 1 / 2;
-            justify-self: end;
+            // justify-self: end;
             text-align: start;
+            padding: 1em 0 0 0;
         }
 
     }
@@ -271,12 +323,10 @@ nav {
         line-height: 2em;
         align-self: center;
         @include desktop {
-            padding: 0;
+            padding:  0 0 4em 4em;
             text-align:start;
-            grid-column: 2 / 3;
-            grid-row: 2 / 3;
-            align-self: start;
             width: 66%;
+            justify-self: start;
         }
     }
 
@@ -298,17 +348,25 @@ nav {
             }
         }
         @include desktop {
-            justify-self: center;
+            justify-self: end;
             align-self: center;
-            grid-row: 3 / 6;
-            grid-column: 1 / 2;
+            grid-row: 1 / 3;
         }
+        @include desktop {
+            &:nth-of-type(2) {
+                grid-row: 4 / 6;
+            }
+        }
+    }
+    .break {
+        height: 0.1px;
     }
 }
 
 .contact {
-    margin: $margin-top;
+    margin: 6em 0;
     .tagline {
+        margin-bottom: 12em;
         display: grid;
         justify-items: center;
         min-height: 350px;
@@ -322,7 +380,7 @@ nav {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            grid-column: 3 / 7;
+            grid-column: 3 / 6;
             
         }
         @include desktop {
@@ -338,6 +396,8 @@ nav {
             text-align: start;
         }
         h3 {
+            font-family: "Helvetica Neue LT Pro Bold";
+            letter-spacing: 0px;
             font-size: 2.5em;
             line-height: 1em;
             color: white;
@@ -362,6 +422,31 @@ nav {
             text-align: center;
             font-size: 1.25em;
         }
+        .attach {
+            max-width: 150px;
+            margin: 1em 3em;
+            cursor: pointer;
+            font-size:1.2em;
+            color: grey;
+            text-align: start;
+            align-self:start;
+            text-align: center;
+            align-self:center;
+            margin: 1em;
+            max-width: 100%;
+            &+ p {
+            margin-top:0;
+            }
+            &::before {
+                content: url(../../images/paperclip.png);
+            }
+            @include desktop {
+                max-width: 150px;
+                margin: 1em 3em;
+                text-align: start;
+                align-self:start;
+            }
+        }
     }
 }
 
@@ -378,33 +463,57 @@ div.wpcf7 {
     display: block;
     text-align: center;
     box-shadow:0px 0px 4px 1px rgba(0,0,0,0.33);
-    padding: 10% 5%;
-    
-    @include desktop {
-        padding: $desktop-text-padding;
-        width: 50%;
+    // padding: 10% 5%;
+    .form-area {
+        color: grey;
+        font-family: 'Helvetica Neue LT Pro';
+        margin: 1.5em 0;
+        @include desktop{
+            display: flex;
+            margin: 2em 3em;
+        }
+        .form-text {
+            font-size:1.25em;
+            width: 150px;
+            text-align: start;
+            display: inline-block;
+        }
     }
-    p {
-        width: 100%;
-        font-size: 2em;
-        margin: 1em 0;
+    .notes {
+        background-attachment: local;
+        background-image:
+            linear-gradient(to right, white 10px, transparent 10px),
+            linear-gradient(to left, white 10px, transparent 10px),
+            repeating-linear-gradient(white, white 60px, grey 60px, grey 61px, white 61px);
+        line-height: 62px;
+        padding: 4px 5px;
+    }
+        padding: 0.5em 1em;
+
         label, input, span, textarea {
             width:100%;
             border: none;
         }
-        input, textarea {
-            border-bottom: solid 1px $brand-color;
-            font-size: 0.5em;
+        input {
+            border-bottom: solid 1px grey;
+        }
+        input,textarea {
+            font-size:1.25em;
+        }
+        .line {
+            width: calc(100% - 2em);
+            background: black;
+            height: 1px;
         }
         input[type="submit"] {
             width: 200px;
+            margin: 2em 0;
             background: $brand-color;
             color: white;
             text-transform: uppercase;
-            padding: 0.75em 0.75em;
+            padding: 0.25em;
             cursor: pointer;
         }
-    }
 }
 
 footer {
@@ -418,16 +527,17 @@ footer {
     aside {
         text-align: start;
         justify-self:end;
+        align-self:end;
     }
     img {
         width: 25%;
         @include desktop {
-            width: 5%;
+            width: 15%;
         }
     }
 
     @include desktop {
-        font-size: 1em;
+        font-size: 0.75em;
         padding: 2em 8em;
     }
     p {
@@ -461,7 +571,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-content: space-around;
-    .projects {
+    .projects-single {
         flex:1;
         top: 112px;
         justify-items: center;
@@ -495,6 +605,9 @@ footer {
             @include desktop {
                 grid-column: 1/3;
             }
+        }
+        button {
+            margin: 0 0 4em 0;
         }
     }
     .portfolio-img {

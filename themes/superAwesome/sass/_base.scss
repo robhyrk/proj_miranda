@@ -57,7 +57,7 @@ table {
 
 $brand-color: #000;
 
-$margin-top: 4em 0;
+$margin-top: 4em 0 0 0;
 
 $mobile-text-padding: 2.5em;
 $desktop-text-padding: 4em 8em;
@@ -67,7 +67,18 @@ $desktop-breakpoint: 1024px;
 //FONTS
 
 html {
-    font-family: 'Lato';
+    font-family: 'Gill Sans Std Light';
+}
+
+h1, h2 {
+	font-family: 'Gill Sans MT Pro Medium';
+	letter-spacing:5px;
+}
+
+h3 {
+	font-family: 'Gill Sans MT Pro';
+	letter-spacing:2px;
+
 }
 
 //MIXINS

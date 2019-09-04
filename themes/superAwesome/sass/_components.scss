@@ -4,23 +4,14 @@ Anything reusable such as buttons, navbars, cards etc.
 
 h2 {
     text-align: center;
-    font-size: 3em;
+	font-size: 2em;
     text-transform: uppercase; 
 	position: relative; 
 	margin: 1em 0;
-    // &::after {
-	// 	position: absolute;
-	// 	height: 2px;
-	// 	margin: 0 auto;
-	// 	content: '';
-	// 	left: 0;
-	// 	right: 0;
-	// 	width: 40%;
-	// 	color: #000;
-	// 	background-color: black;
-	// 	left: 0;
-	// 	bottom: -15px; /* adjust this to move up and down. you may have to adjust the line height of the paragraph if you move it down a lot. */
-	// }
+	@include desktop {
+		font-size: 3em;
+
+	}
 }
 
 a {
@@ -29,9 +20,9 @@ a {
 }
 
 .break {
-	width: 80%;
-	background: grey;
-	height: 1px;
+	width: calc(100% - 2em);
+	background: black;
+	height: 2px;
 	@include desktop {
 	grid-column: 1 / 3;
 	}
@@ -61,11 +52,16 @@ button {
 }
 
 p {
-    font-size: 1.25em;
-    line-height: 2em;
+	font-size: 1em;
+	line-height: 3em;
+	@include desktop {
+		font-size: 1.25em;
+		line-height: 2em;
+	}
 }
 
 h3 {
 	font-size: 2em;
-    line-height: 2.5em;
+	line-height: 2.5em;
+
 }
