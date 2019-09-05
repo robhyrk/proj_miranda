@@ -85,7 +85,7 @@ h3 {
 
 @mixin lines { 
 	.gradLine1 {
-		background-image: linear-gradient(-90deg, white, transparent);
+		background-image: linear-gradient(-90deg, rgba(255, 255, 255, 0.5), transparent);
 		border:0;
 		position: relative;
 		height: 1px;
@@ -95,7 +95,7 @@ h3 {
 		}
 	} 
     .gradLine2 {
-		background-image: linear-gradient(90deg, white, transparent);
+		background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.5), transparent);
 		position: relative;
         border: 0;
 		height: 1px;
