@@ -45,6 +45,7 @@ jQuery(document).ready(function($){
   //shows/hide 'load more' button based on screen width
   if ($(window).width() < 1024) {
       $loadBtn.hide();
+      $('.gradLine2').hide();
   }
   $(window).resize(function() {
     if ($(window).width() < 1024) {

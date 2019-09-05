@@ -167,9 +167,7 @@ a {
   color: #fff; }
 
 .break {
-  width: calc(100% - 2em);
-  background: black;
-  height: 0.01px; }
+  width: calc(100% - 6em); }
   @media (min-width: 1024px) {
     .break {
       grid-column: 1 / 3; } }
@@ -179,7 +177,8 @@ button {
   text-align: center;
   background: #000;
   color: white;
-  font-size: 1.1rem; }
+  font-size: 1.1rem;
+  margin: 4em 0; }
   button:focus {
     border: none;
     outline: none; }
@@ -343,11 +342,13 @@ nav {
         max-width: 50%; } }
   .about .top h3 {
     font-size: 1em;
-    margin: 1em 0; }
+    margin: 1em 0;
+    text-align: center;
+    line-height: 1.75em; }
     @media (min-width: 1024px) {
       .about .top h3 {
         font-size: 1.5em;
-        line-height: 1.5em; } }
+        text-align: start; } }
   .about .top .slogan {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -391,7 +392,7 @@ nav {
           left: 30%; } }
   .about .top .aboutLogo {
     width: 25%;
-    margin: 1em 0;
+    margin: 1em 0 0 0;
     -ms-flex-item-align: center;
         align-self: center; }
 
@@ -399,11 +400,13 @@ nav {
   display: grid; }
   .about .bottom .textwidget {
     margin: 2em 0 0 0; }
+  .about .bottom .about-me-text {
+    margin: 2em 0 0 0; }
   .about .bottom p {
     grid-row: 1 / 3;
     -ms-flex-item-align: center;
         align-self: center;
-    padding: 2em;
+    padding: 0 2em;
     text-align: center; }
     @media (min-width: 1024px) {
       .about .bottom p {
@@ -415,6 +418,8 @@ nav {
     -ms-flex-item-align: center;
         align-self: center;
     text-align: center; }
+  .about .bottom button {
+    margin: 4em 0 2em 0; }
   @media (min-width: 1024px) {
     .about .bottom .read-more p {
       padding: 0em 8em 4em 8em; } }
@@ -445,7 +450,8 @@ nav {
         grid-template-rows: repeat(2, 1fr);
         grid-gap: 0.5em;
         background: white;
-        padding: 1em; }
+        padding: 1em;
+        margin: 0 2em; }
         .projects .carousel .carousel-cell {
           background: transparent;
           height: 100%; }
@@ -527,12 +533,18 @@ nav {
     .extra .xtra {
       grid-row: 4 / 6; } }
   .extra .break {
-    grid-row: 3; }
-  .extra img {
-    max-width: 500px; }
+    grid-row: 4; }
     @media (min-width: 1024px) {
-      .extra img:nth-child(2) {
-        grid-row: 1 / 3; } }
+      .extra .break {
+        grid-row: 3; } }
+  .extra img {
+    max-width: 500px;
+    height: 200px; }
+    .extra img:nth-child(2) {
+      height: 300px; }
+      @media (min-width: 1024px) {
+        .extra img:nth-child(2) {
+          grid-row: 1 / 3; } }
     @media (min-width: 1024px) {
       .extra img {
         justify-self: end;
@@ -542,8 +554,6 @@ nav {
     @media (min-width: 1024px) {
       .extra img:nth-of-type(2) {
         grid-row: 4 / 6; } }
-  .extra .break {
-    height: 0.01px; }
 
 .contact {
   margin: 6em 0; }
@@ -597,6 +607,8 @@ nav {
       @media (min-width: 1024px) {
         .contact .tagline p {
           grid-column: 3 / 6; } }
+  .contact aside img {
+    width: 100%; }
   .contact .form {
     margin: 4em 0 0 0; }
     .contact .form h3 {
@@ -623,8 +635,8 @@ nav {
         content: url(../../images/paperclip.png); }
       @media (min-width: 1024px) {
         .contact .form .attach {
-          margin: 1em 3em;
-          text-align: start;
+          margin: 1em 4em;
+          text-align: end;
           -ms-flex-item-align: start;
               align-self: start; } }
 
@@ -638,8 +650,8 @@ nav {
   margin: 4em auto;
   display: block;
   text-align: center;
-  -webkit-box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.33);
-          box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.33);
+  -webkit-box-shadow: -2px 2px 5px 0px rgba(0, 0, 0, 0.15);
+          box-shadow: -2px 2px 5px 0px rgba(0, 0, 0, 0.15);
   padding: 0.5em 1em; }
   .wpcf7-form .form-area {
     color: grey;
@@ -652,22 +664,27 @@ nav {
         display: flex;
         margin: 2em 3em; } }
     .wpcf7-form .form-area .form-text {
-      font-size: 1.25em;
+      font-size: 1em;
       width: 150px;
       text-align: center;
       display: inline-block; }
+      .wpcf7-form .form-area .form-text + p {
+        width: 100%; }
       @media (min-width: 1024px) {
         .wpcf7-form .form-area .form-text {
           text-align: start; } }
   .wpcf7-form .attach-notice {
-    font-size: 0.66em; }
+    font-size: 0.5em; }
+    @media (min-width: 1024px) {
+      .wpcf7-form .attach-notice {
+        font-size: 0.66em; } }
   .wpcf7-form .notes {
     background-attachment: local;
     background-image: linear-gradient(to right, white 10px, transparent 10px), linear-gradient(to left, white 10px, transparent 10px), repeating-linear-gradient(white, white 60px, grey 60px, grey 61px, white 61px);
     line-height: 62px;
     padding: 4px 5px; }
   .wpcf7-form label, .wpcf7-form input, .wpcf7-form span, .wpcf7-form textarea {
-    width: 100%;
+    width: 90%;
     border: none; }
   .wpcf7-form input {
     border-bottom: solid 1px grey; }
