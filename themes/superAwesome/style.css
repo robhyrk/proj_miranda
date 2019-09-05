@@ -328,7 +328,7 @@ nav {
   display: grid;
   grid-template-rows: 1fr 4fr;
   grid-template-columns: repeat(6, 1fr);
-  padding: 2em 0 0 0; }
+  padding: 10em 0 0 0; }
   .about .top .cutout {
     max-width: 60%;
     grid-column: 2 / 7;
@@ -391,10 +391,14 @@ nav {
           width: 40%;
           left: 30%; } }
   .about .top .aboutLogo {
-    width: 25%;
     margin: 1em 0 0 0;
     -ms-flex-item-align: center;
         align-self: center; }
+    @media (min-width: 1024px) {
+      .about .top .aboutLogo {
+        margin: 1em 0 0 5em;
+        -ms-flex-item-align: start;
+            align-self: start; } }
 
 .about .bottom {
   display: grid; }
