@@ -286,7 +286,7 @@ nav {
   text-align: center; }
   @media (min-width: 1024px) {
     .hero {
-      background-size: 20%; } }
+      background-size: 15%; } }
   .hero .heroBlock {
     margin: 30em 0 5em 0;
     width: 100%; }
