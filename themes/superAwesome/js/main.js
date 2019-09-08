@@ -3,18 +3,28 @@ jQuery(document).ready(function($){
   //nav menu
   $( ".menu" ).hide();
   $( ".hamburger" ).on("click", function() {
-    $( ".hamburger" ).toggleClass('is-active');
+    $( ".hamburger" ).addClass('is-active');
     $( "#navbar" ).toggleClass('sticky');
     $( ".menu" ).slideToggle( 'fast', function(){
+      $("body").on("click", function(event){
+        const $trigger2 = $(".hamburger");
+        if(event.target !== 'menu'){
+          $(".menu").slideUp("fast");
+          $( ".hamburger" ).removeClass('is-active');
+          // $( ".hamburger" ).toggleClass('is-active');
+          console.log('yo')
+          
+      }
     });
-    // $( ".hamburger" ).toggle();
+        })
+  }); 
 
         //   $('body:not(header > *)').on('click', function() {
     //     $( ".hamburger" ).toggle();
     //     $( ".menu" ).slideToggle( 'fast', function(){
     //   });
     // })
-  });
+  // });
 
   $( ".menu ul a li" ).on("click",  function() {
     $( ".hamburger" ).toggleClass('is-active');
