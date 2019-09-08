@@ -222,6 +222,8 @@ nav {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end; }
+  nav .hamburger {
+    margin: 1em; }
   nav .hamburger-inner, nav .hamburger-inner:after, nav .hamburger-inner:before {
     background: lightgrey !important; }
 
@@ -252,7 +254,6 @@ nav {
   .menu li:hover {
     display: block;
     background: #ffffff;
-    padding: 15px 0 15px 0;
     border-bottom: #dddddd 1px solid; }
   .menu ul li a {
     text-decoration: none;

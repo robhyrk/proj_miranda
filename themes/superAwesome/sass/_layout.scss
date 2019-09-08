@@ -17,8 +17,7 @@ nav {
     display: flex;
     justify-content: flex-end;
     .hamburger {
-        // margin: 1em;
-        // border: solid 2px $brand-color;
+        margin: 1em;
     }
     .hamburger-inner, .hamburger-inner:after, .hamburger-inner:before{
         background: lightgrey !important;
@@ -55,7 +54,6 @@ nav {
     li:hover{
         display: block;    
         background:#ffffff; 
-        padding:15px 0 15px 0; 
         border-bottom:#dddddd 1px solid;
     }
     ul li a { 

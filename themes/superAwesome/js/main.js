@@ -1,34 +1,24 @@
 jQuery(document).ready(function($){
 
-  //nav menu
+  //nav menu hides on click
   $( ".menu" ).hide();
-  $( ".hamburger" ).on("click", function() {
-    $( ".hamburger" ).addClass('is-active');
+  $( ".hamburger" ).on("click", function(event) {
+    event.stopPropagation();
+    $( ".hamburger" ).toggleClass('is-active').hide('fast');
     $( "#navbar" ).toggleClass('sticky');
     $( ".menu" ).slideToggle( 'fast', function(){
       $("body").on("click", function(event){
-        const $trigger2 = $(".hamburger");
-        if(event.target !== 'menu'){
+        if(event.target !== 'menu' && $( ".hamburger").hasClass('is-active')){
           $(".menu").slideUp("fast");
-          $( ".hamburger" ).removeClass('is-active');
-          // $( ".hamburger" ).toggleClass('is-active');
-          console.log('yo')
-          
-      }
-    });
-        })
+          $( ".hamburger" ).toggleClass('is-active').fadeIn('fast');          
+        }
+      });
+    })
   }); 
-
-        //   $('body:not(header > *)').on('click', function() {
-    //     $( ".hamburger" ).toggle();
-    //     $( ".menu" ).slideToggle( 'fast', function(){
-    //   });
-    // })
-  // });
 
   $( ".menu ul a li" ).on("click",  function() {
     $( ".hamburger" ).toggleClass('is-active');
-    
+  
     $('.menu').toggle()
   });
 
