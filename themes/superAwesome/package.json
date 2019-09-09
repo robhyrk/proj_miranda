@@ -19,9 +19,10 @@
     "gulp-terser": "^1.1.5"
   },
   "browserslist": [
-    "last 2 versions",
-    "> 1%"
-    ],
+    "last 5 versions",
+    "> 0.3%",
+    "iOS >= 7"
+  ],
   "prettier": {
     "singleQuote": true
   },

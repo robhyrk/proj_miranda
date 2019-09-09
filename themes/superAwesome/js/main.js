@@ -2,12 +2,12 @@ jQuery(document).ready(function($){
 
   //nav menu hides on click
   $( ".menu" ).hide();
-  $( ".hamburger" ).on("click", function(event) {
+  $( ".hamburger" ).on("click touchend", function(event) {
     event.stopPropagation();
     $( ".hamburger" ).toggleClass('is-active').hide();
     $( "#navbar" ).toggleClass('sticky');
     $( ".menu" ).slideToggle( 'fast', function(){
-      $("body").on("click", function(event){
+      $("body").on("click touchend", function(event){
         if(event.target !== 'menu' && $( ".hamburger").hasClass('is-active')){
           $(".menu").slideUp("fast");
           $( ".hamburger" ).toggleClass('is-active').fadeIn('fast');          

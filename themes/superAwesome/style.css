@@ -135,6 +135,10 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+input {
+  -webkit-appearance: none;
+  border-radius: 0 !important; }
+
 html {
   font-family: 'Gill Sans Std Light'; }
 
@@ -217,9 +221,11 @@ header {
 
 nav {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
       -ms-flex-pack: end;
           justify-content: flex-end; }
   nav .hamburger {
@@ -271,16 +277,20 @@ nav {
 
 .hero {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: end;
+  -webkit-align-items: flex-end;
       -ms-flex-align: end;
           align-items: flex-end;
   -webkit-box-pack: center;
+  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   min-height: 100vh;
   background: url("../../images/logo.png") no-repeat 50% 40%, -webkit-gradient(linear, left bottom, left top, from(#000), to(#000));
+  background: url("../../images/logo.png") no-repeat 50% 40%, -o-linear-gradient(bottom, #000, #000);
   background: url("../../images/logo.png") no-repeat 50% 40%, linear-gradient(0deg, #000, #000);
   background-size: 50%;
   color: #fff;
@@ -299,11 +309,14 @@ nav {
   .hero span {
     display: inline-block; }
   .hero h3 {
-    font-family: "Gill Sans Std Light Italic";
+    font-family: "Gill Sans Std Light Italic", "Lato";
+    font-style: italic;
     font-size: 1.25em;
     line-height: 2em; }
     .hero h3 > span {
-      font-family: "Gill Sans Std Bold";
+      font-family: "Gill Sans Std Bold", "Lato";
+      font-style: initial;
+      font-weight: initial;
       color: white; }
     @media (min-width: 1024px) {
       .hero h3 {
@@ -313,6 +326,7 @@ nav {
     letter-spacing: 1px; }
   .hero .gradLine1 {
     background-image: -webkit-gradient(linear, right top, left top, from(rgba(255, 255, 255, 0.5)), to(transparent));
+    background-image: -o-linear-gradient(right, rgba(255, 255, 255, 0.5), transparent);
     background-image: linear-gradient(-90deg, rgba(255, 255, 255, 0.5), transparent);
     border: 0;
     position: relative;
@@ -323,6 +337,7 @@ nav {
         margin: 0 2em; } }
   .hero .gradLine2 {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.5)), to(transparent));
+    background-image: -o-linear-gradient(left, rgba(255, 255, 255, 0.5), transparent);
     background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.5), transparent);
     position: relative;
     border: 0;
@@ -362,13 +377,16 @@ nav {
         text-align: start; } }
   .about .top .slogan {
     display: -webkit-box;
+    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
     -webkit-box-pack: center;
+    -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
     grid-column: 1 / 5;
@@ -383,6 +401,7 @@ nav {
       margin: 15% 0%; }
     .about .top .slogan .gradLine1 {
       background-image: -webkit-gradient(linear, right top, left top, from(rgba(255, 255, 255, 0.5)), to(transparent));
+      background-image: -o-linear-gradient(right, rgba(255, 255, 255, 0.5), transparent);
       background-image: linear-gradient(-90deg, rgba(255, 255, 255, 0.5), transparent);
       border: 0;
       position: relative;
@@ -393,6 +412,7 @@ nav {
           margin: 0 2em; } }
     .about .top .slogan .gradLine2 {
       background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.5)), to(transparent));
+      background-image: -o-linear-gradient(left, rgba(255, 255, 255, 0.5), transparent);
       background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.5), transparent);
       position: relative;
       border: 0;
@@ -403,13 +423,15 @@ nav {
           left: 30%; } }
   .about .top .aboutLogo {
     margin: 1em 0 0 0;
-    -ms-flex-item-align: center;
-        align-self: center; }
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
+            align-self: center; }
     @media (min-width: 1024px) {
       .about .top .aboutLogo {
         margin: 1em 0 0 5em;
-        -ms-flex-item-align: start;
-            align-self: start; } }
+        -webkit-align-self: start;
+            -ms-flex-item-align: start;
+                align-self: start; } }
 
 .about .bottom {
   display: grid; }
@@ -531,7 +553,7 @@ nav {
       .extra .extraText span {
         font-size: 0.8em; } }
   .extra h3 {
-    font-family: 'Kaufmann Std';
+    font-family: 'Kaufmann Std', 'Yellowtail';
     font-size: 2.5em; }
     @media (min-width: 1024px) {
       .extra h3 {
@@ -543,8 +565,9 @@ nav {
     padding: 2.5em;
     text-align: center;
     line-height: 1.5em;
-    -ms-flex-item-align: center;
-        align-self: center; }
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
+            align-self: center; }
     @media (min-width: 1024px) {
       .extra p {
         padding: 0 0 4em 4em;
@@ -587,17 +610,21 @@ nav {
     padding: 2.5em;
     text-align: center;
     background: url("../../images/brainstorm.jpg") no-repeat center center, -webkit-gradient(linear, right top, left top, from(#000), to(#3c3c3c));
+    background: url("../../images/brainstorm.jpg") no-repeat center center, -o-linear-gradient(right, #000, #3c3c3c);
     background: url("../../images/brainstorm.jpg") no-repeat center center, linear-gradient(-90deg, #000, #3c3c3c);
     background-size: 66%, auto; }
     .contact .tagline .tagText {
       display: -webkit-box;
+      display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
           -ms-flex-direction: column;
               flex-direction: column;
       -webkit-box-pack: center;
+      -webkit-justify-content: center;
           -ms-flex-pack: center;
               justify-content: center;
       grid-column: 3 / 6; }
@@ -609,6 +636,7 @@ nav {
         padding: 4em 8em;
         min-height: 400px;
         background: url("../../images/brainstorm.jpg") no-repeat left center, -webkit-gradient(linear, right top, left top, from(#000), to(#3c3c3c));
+        background: url("../../images/brainstorm.jpg") no-repeat left center, -o-linear-gradient(right, #000, #3c3c3c);
         background: url("../../images/brainstorm.jpg") no-repeat left center, linear-gradient(-90deg, #000, #3c3c3c);
         background-size: 33%, auto;
         text-align: start; } }
@@ -644,11 +672,13 @@ nav {
       font-size: 1.2em;
       color: grey;
       text-align: start;
-      -ms-flex-item-align: start;
-          align-self: start;
+      -webkit-align-self: start;
+          -ms-flex-item-align: start;
+              align-self: start;
       text-align: center;
-      -ms-flex-item-align: center;
-          align-self: center;
+      -webkit-align-self: center;
+          -ms-flex-item-align: center;
+              align-self: center;
       margin: 1em;
       max-width: 100%; }
       .contact .form .attach + p {
@@ -659,8 +689,9 @@ nav {
         .contact .form .attach {
           margin: 1em 4em;
           text-align: end;
-          -ms-flex-item-align: start;
-              align-self: start; } }
+          -webkit-align-self: start;
+              -ms-flex-item-align: start;
+                  align-self: start; } }
 
 @media (min-width: 1024px) {
   div.wpcf7 {
@@ -682,6 +713,7 @@ nav {
     @media (min-width: 1024px) {
       .wpcf7-form .form-area {
         display: -webkit-box;
+        display: -webkit-flex;
         display: -ms-flexbox;
         display: flex;
         margin: 2em 3em; } }
@@ -702,6 +734,7 @@ nav {
         font-size: 0.66em; } }
   .wpcf7-form .notes {
     background-attachment: local;
+    background-image: -o-linear-gradient(left, white 10px, transparent 10px), -o-linear-gradient(right, white 10px, transparent 10px), -o-repeating-linear-gradient(white, white 60px, grey 60px, grey 61px, white 61px);
     background-image: linear-gradient(to right, white 10px, transparent 10px), linear-gradient(to left, white 10px, transparent 10px), repeating-linear-gradient(white, white 60px, grey 60px, grey 61px, white 61px);
     line-height: 62px;
     padding: 4px 5px; }
@@ -729,6 +762,7 @@ footer {
   display: grid;
   grid-template-columns: 1fr 1fr;
   background: -webkit-gradient(linear, right top, left top, from(#000), to(#222222));
+  background: -o-linear-gradient(right, #000, #222222);
   background: linear-gradient(-90deg, #000, #222222);
   color: white;
   padding: 2.5em;
@@ -737,8 +771,9 @@ footer {
   footer aside {
     text-align: start;
     justify-self: end;
-    -ms-flex-item-align: end;
-        align-self: end; }
+    -webkit-align-self: end;
+        -ms-flex-item-align: end;
+            align-self: end; }
   footer img {
     width: 25%; }
     @media (min-width: 1024px) {
@@ -768,14 +803,17 @@ footer {
   top: 112px;
   min-height: 100vh;
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-line-pack: distribute;
-      align-content: space-around; }
+  -webkit-align-content: space-around;
+      -ms-flex-line-pack: distribute;
+          align-content: space-around; }
   .single-portfolio .wp-block-cb-carousel.slick-dotted {
     padding-bottom: 0 !important; }
   .single-portfolio .slick-next {
@@ -805,6 +843,7 @@ footer {
           font-size: 40px; } }
   .single-portfolio header {
     background: -webkit-gradient(linear, right top, left top, from(#000), to(#222222));
+    background: -o-linear-gradient(right, #000, #222222);
     background: linear-gradient(-90deg, #000, #222222); }
   .single-portfolio .active {
     background: transparent; }
@@ -816,6 +855,7 @@ footer {
         margin: 0 auto; } }
   .single-portfolio .projects-single {
     -webkit-box-flex: 1;
+    -webkit-flex: 1;
         -ms-flex: 1;
             flex: 1;
     top: 112px;
@@ -836,8 +876,9 @@ footer {
           width: 66%;
           margin: 0 auto; } }
     .single-portfolio .projects-single a {
-      -ms-flex-item-align: center;
-          align-self: center;
+      -webkit-align-self: center;
+          -ms-flex-item-align: center;
+              align-self: center;
       margin: 2em 0 0 0;
       display: block;
       text-align: center; }
@@ -859,11 +900,14 @@ footer {
   cursor: pointer;
   -webkit-transition-property: opacity, -webkit-filter;
   transition-property: opacity, -webkit-filter;
+  -o-transition-property: opacity, filter;
   transition-property: opacity, filter;
   transition-property: opacity, filter, -webkit-filter;
   -webkit-transition-duration: 0.15s;
+       -o-transition-duration: 0.15s;
           transition-duration: 0.15s;
   -webkit-transition-timing-function: linear;
+       -o-transition-timing-function: linear;
           transition-timing-function: linear;
   font: inherit;
   color: inherit;
@@ -903,11 +947,14 @@ footer {
   position: absolute;
   -webkit-transition-property: -webkit-transform;
   transition-property: -webkit-transform;
+  -o-transition-property: transform;
   transition-property: transform;
   transition-property: transform, -webkit-transform;
   -webkit-transition-duration: 0.15s;
+       -o-transition-duration: 0.15s;
           transition-duration: 0.15s;
   -webkit-transition-timing-function: ease;
+       -o-transition-timing-function: ease;
           transition-timing-function: ease; }
 
 .hamburger-inner::before, .hamburger-inner::after {
@@ -930,12 +977,14 @@ footer {
 .hamburger--3dx .hamburger-inner {
   -webkit-transition: background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1); }
 
 .hamburger--3dx .hamburger-inner::before, .hamburger--3dx .hamburger-inner::after {
   -webkit-transition: -webkit-transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: -webkit-transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1); }
 
@@ -1025,6 +1074,7 @@ https://flickity.metafizzy.co
   border-radius: 50%;
   /* vertically center */
   -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
           transform: translateY(-50%); }
 
 .flickity-prev-next-button.previous {
@@ -1092,6 +1142,7 @@ https://flickity.metafizzy.co
   max-width: 100%;
   opacity: 0;
   -webkit-transition: opacity 0.4s;
+  -o-transition: opacity 0.4s;
   transition: opacity 0.4s; }
 
 /* fade in lazy loaded image */
@@ -1190,12 +1241,15 @@ html.is-flickity-fullscreen {
   background: #222;
   /* center images in cells with flexbox */
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
+  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
+  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center; }
 
