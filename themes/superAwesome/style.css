@@ -777,24 +777,26 @@ footer {
   -ms-flex-line-pack: distribute;
       align-content: space-around; }
   .single-portfolio .slick-next {
-    right: 5%; }
+    top: 100% !important;
+    right: 15%; }
     @media (min-width: 1024px) {
       .single-portfolio .slick-next {
-        right: 15%; } }
+        right: 25%; } }
     .single-portfolio .slick-next:before {
-      color: white; }
+      font-size: 40px; }
       @media (min-width: 1024px) {
         .single-portfolio .slick-next:before {
           color: black;
           font-size: 40px; } }
   .single-portfolio .slick-prev {
-    left: 5%;
+    left: 10%;
+    top: 100% !important;
     z-index: 1; }
     @media (min-width: 1024px) {
       .single-portfolio .slick-prev {
-        left: 13.5%; } }
+        left: 25%; } }
     .single-portfolio .slick-prev:before {
-      color: white; }
+      font-size: 40px; }
       @media (min-width: 1024px) {
         .single-portfolio .slick-prev:before {
           color: black;

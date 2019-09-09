@@ -624,12 +624,14 @@ footer {
     flex-direction: column;
     align-content: space-around;
     .slick-next {
-        right: 5%;
+        top:100% !important;
+        right: 15%;
         @include desktop {
-            right:15%;
+            right:25%;
         }
         &:before {
-            color: white;
+            // color: white;
+            font-size:40px;
             @include desktop {
                 color:black;
                 font-size:40px;
@@ -637,13 +639,16 @@ footer {
         }
     }
     .slick-prev {
-        left: 5%;
+        left: 10%;
+        top:100% !important;
+
         z-index: 1;
         @include desktop {
-            left:13.5%;
+            left:25%;
         }
         &:before {
-            color: white;
+            // color: white;
+            font-size:40px;
             @include desktop {
                 color:black;
                 font-size:40px;
