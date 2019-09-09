@@ -1,4 +1,5 @@
-const autoprefixer = require('gulp-autoprefixer');
+const autoprefixer = require('autoprefixer');
+
 const browserSync = require('browser-sync');
 const cssnano = require('gulp-cssnano');
 const eslint = require('gulp-eslint');
@@ -8,6 +9,7 @@ const rename = require('gulp-rename');
 const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
 const terser = require('gulp-terser');
+const postcss = require('gulp-postcss')
 
 // Create basic Gulp tasks
 
@@ -17,13 +19,8 @@ gulp.task('sass', function() {
     .pipe(sourcemaps.init())
     .pipe(prettyError())
     .pipe(sass())
-    .pipe(
-      autoprefixer({
-        browsers: ['last 2 versions']
-      })
-    )
+    .pipe(postcss([ autoprefixer ]))
     .pipe(gulp.dest('./'))
-    .pipe(cssnano())
     .pipe(rename('style.min.css'))
     .pipe(sourcemaps.write('../maps'))
     .pipe(gulp.dest('./build/css'));

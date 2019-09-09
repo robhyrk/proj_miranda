@@ -39,7 +39,8 @@ add_action('wp_enqueue_scripts', 'uni_files');
 //Theme setup
 function superAwesome_features() {
     add_theme_support('title-tag');
-    add_theme_support('post-thumbnails');
+	add_theme_support('post-thumbnails');
+	add_image_size('grid', 350, 500, true);
 }
 
 add_action('after_setup_theme', 'superAwesome_features');

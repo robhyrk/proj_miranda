@@ -10,8 +10,9 @@
                 <div class="portfolio-img">
                     <?php the_post_thumbnail(array(400, 400));?>
                 </div>
-                 
-                <?php the_content();?>
+                <section class="portfolio-content">
+                    <?php the_content();?>
+                </section>
                 
 
             <?php endwhile;?>

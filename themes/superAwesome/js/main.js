@@ -4,7 +4,7 @@ jQuery(document).ready(function($){
   $( ".menu" ).hide();
   $( ".hamburger" ).on("click", function(event) {
     event.stopPropagation();
-    $( ".hamburger" ).toggleClass('is-active').hide('fast');
+    $( ".hamburger" ).toggleClass('is-active').hide();
     $( "#navbar" ).toggleClass('sticky');
     $( ".menu" ).slideToggle( 'fast', function(){
       $("body").on("click", function(event){

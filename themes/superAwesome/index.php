@@ -47,7 +47,7 @@
             ?>
 
             <div class='carousel-cell'>
-                <a href="<?php the_permalink();?>"><?php the_post_thumbnail(array(400, 400)); ?></a> 
+                <a href="<?php the_permalink();?>"><img src="<?php echo get_field('grid_image')['url'];?>"></a> 
             </div>
 
         <?php endwhile;?>
