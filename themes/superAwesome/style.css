@@ -817,7 +817,7 @@ footer {
   .single-portfolio .wp-block-cb-carousel.slick-dotted {
     padding-bottom: 0 !important; }
   .single-portfolio .wp-block-cb-carousel.slick-dotted ul.slick-dots {
-    top: 100%; }
+    top: 99%; }
   .single-portfolio .slick-next {
     top: 100% !important;
     right: 15%;
