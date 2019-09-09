@@ -629,6 +629,9 @@ footer {
     .wp-block-cb-carousel.slick-dotted {
         padding-bottom: 0 !important;
     }
+    .wp-block-cb-carousel.slick-dotted ul.slick-dots {
+        top:100%;
+    }
     .slick-next {
         top:100% !important;
         right: 15%;
