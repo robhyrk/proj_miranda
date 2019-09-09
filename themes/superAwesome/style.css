@@ -828,7 +828,6 @@ footer {
       @media (min-width: 1024px) {
         .single-portfolio .projects-single img {
           width: 66%;
-          height: 100%;
           display: block; } }
     .single-portfolio .projects-single p {
       padding: 2em; }
