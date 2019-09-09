@@ -811,15 +811,15 @@ footer {
     top: 112px;
     justify-items: center; }
     .single-portfolio .projects-single img {
-      width: 100%; }
+      width: 100%;
+      margin: 4em auto; }
       @media (min-width: 1024px) {
         .single-portfolio .projects-single img {
           -o-object-fit: cover;
              object-fit: cover;
           width: 66%;
           height: 100%;
-          display: block;
-          margin: 4em auto; } }
+          display: block; } }
     .single-portfolio .projects-single p {
       padding: 2em; }
       @media (min-width: 1024px) {
