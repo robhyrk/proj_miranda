@@ -623,6 +623,9 @@ footer {
     display: flex;
     flex-direction: column;
     align-content: space-around;
+    .wp-block-cb-carousel.slick-dotted {
+        padding-bottom: 0 !important;
+    }
     .slick-next {
         top:100% !important;
         right: 15%;

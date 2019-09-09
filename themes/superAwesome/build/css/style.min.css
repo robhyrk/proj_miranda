@@ -776,6 +776,8 @@ footer {
           flex-direction: column;
   -ms-flex-line-pack: distribute;
       align-content: space-around; }
+  .single-portfolio .wp-block-cb-carousel.slick-dotted {
+    padding-bottom: 0 !important; }
   .single-portfolio .slick-next {
     top: 100% !important;
     right: 15%; }
