@@ -664,6 +664,13 @@ footer {
     .active {
         background: transparent;
     }
+    .portfolio-img {
+        width: 100%;
+        @include desktop {
+            display: block;
+            margin: 0 auto;
+        }
+    }
     .projects-single {
         flex:1;
         top: 112px;
@@ -671,7 +678,7 @@ footer {
         img {
             width: 100%;
             margin: 2em auto;
-            object-fit: cover;
+            object-fit: contain;
             @include desktop {
                 width: 66%;
                 height:100%;
@@ -693,13 +700,6 @@ footer {
         }
         button {
             margin: 0 0 4em 0;
-        }
-    }
-    .portfolio-img {
-        width: 100%;
-        @include desktop {
-            display: block;
-            margin: 0 auto;
         }
     }
     footer {
