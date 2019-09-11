@@ -414,7 +414,7 @@ nav {
         padding: $mobile-text-padding;
         text-align: center;
         background: 
-            url("../../images/brainstorm.png") no-repeat center center,
+            url("../../images/brainstorm.png") no-repeat left center,
             linear-gradient(-90deg, $brand-color,  rgb(60, 60, 60)); 
         background-size: auto, auto;
         .tagText {
@@ -431,7 +431,7 @@ nav {
             padding: $desktop-text-padding;
             min-height: 400px;
             background: 
-            url("../../images/brainstorm.jpg") no-repeat left center,
+            url("../../images/brainstorm.png") no-repeat left center,
             linear-gradient(-90deg, $brand-color,  rgb(60, 60, 60)); 
             background-size: 33%, auto;
             text-align: start;
