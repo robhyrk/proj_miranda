@@ -2,18 +2,24 @@ jQuery(document).ready(function($){
 
   //nav menu hides on click
   $( ".menu" ).hide();
-  $( ".hamburger" ).on("click touchend", function(event) {
+  $( ".hamburger" ).unbind("click touchend").on("click touchend", function(event) {
+
     event.stopPropagation();
-    $( ".hamburger" ).toggleClass('is-active').hide();
-    $( "#navbar" ).toggleClass('sticky');
+
+    $(".menu").slideUp("fast")
+    $( ".hamburger" ).addClass('is-active').hide();
+    // $( "#navbar" ).toggleClass('sticky');
     $( ".menu" ).slideToggle( 'fast', function(){
-      $("body").on("click touchend", function(event){
-        if(event.target !== 'menu' && $( ".hamburger").hasClass('is-active')){
-          $(".menu").slideUp("fast");
-          $( ".hamburger" ).toggleClass('is-active').fadeIn('fast');          
+      $("body").unbind("click touchend").on("click touchend", function(event){
+        event.stopPropagation();
+        if(event.target !== 'menu' || event.target == 'li' && $( ".hamburger").hasClass('is-active')){
+          console.log('yo')
+          $(".menu").slideUp("fast")
+          $( ".hamburger" ).removeClass('is-active').show(); 
         }
       });
     })
+   
   }); 
 
   $( ".menu ul a li" ).on("click",  function() {
