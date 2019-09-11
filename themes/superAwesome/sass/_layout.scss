@@ -414,9 +414,9 @@ nav {
         padding: $mobile-text-padding;
         text-align: center;
         background: 
-            url("../../images/brainstorm.jpg") no-repeat center center,
+            url("../../images/brainstorm.png") no-repeat left center,
             linear-gradient(-90deg, $brand-color,  rgb(60, 60, 60)); 
-        background-size: 66%, auto;
+        background-size: auto, auto;
         .tagText {
             display: flex;
             flex-direction: column;
