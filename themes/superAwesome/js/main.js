@@ -19,7 +19,7 @@ jQuery(document).ready(function($){
         }
       });
     })
-   
+    return false 
   }); 
 
   $( ".menu ul a li" ).on("click",  function() {
