@@ -433,7 +433,7 @@ nav {
             background: 
             url("../../images/brainstorm.png") no-repeat left center,
             linear-gradient(-90deg, $brand-color,  rgb(60, 60, 60)); 
-            background-size: 33%, auto;
+            background-size: auto, auto;
             text-align: start;
         }
         h3 {

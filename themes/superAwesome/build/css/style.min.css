@@ -638,7 +638,7 @@ nav {
         background: url("../../images/brainstorm.png") no-repeat left center, -webkit-gradient(linear, right top, left top, from(#000), to(#3c3c3c));
         background: url("../../images/brainstorm.png") no-repeat left center, -o-linear-gradient(right, #000, #3c3c3c);
         background: url("../../images/brainstorm.png") no-repeat left center, linear-gradient(-90deg, #000, #3c3c3c);
-        background-size: 33%, auto;
+        background-size: auto, auto;
         text-align: start; } }
     .contact .tagline h3 {
       font-family: "Helvetica Neue LT Pro Bold";
