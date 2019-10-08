@@ -17,7 +17,7 @@
 
             <?php endwhile;?>
             <!-- Center button -->
-            <a href="<?php echo get_home_url()?>"><button>BACK TO PROJECTS</button></a>
+            <button><a href="<?php echo home_url("#projects")?>">BACK TO PROJECTS</a></button>
 
 </section>
 <?php get_footer();?>
