@@ -108,7 +108,7 @@ nav {
     h3 {
         font-family: "Gill Sans Std Light Italic", "Lato";
         font-style: italic;
-        font-size: 1.25em;
+        font-size: 1.2em;
         line-height:2em;
         &>span {
             font-family: "Gill Sans Std Bold", "Lato";
@@ -431,9 +431,9 @@ nav {
             padding: $desktop-text-padding;
             min-height: 400px;
             background: 
-            url("../../images/brainstorm.jpg") no-repeat left center,
+            url("../../images/brainstorm.png") no-repeat left center,
             linear-gradient(-90deg, $brand-color,  rgb(60, 60, 60)); 
-            background-size: 33%, auto;
+            background-size: auto, auto;
             text-align: start;
         }
         h3 {
@@ -667,9 +667,6 @@ footer {
             }
         }
     }
-    header {
-        background: linear-gradient(-90deg, $brand-color, #222222);
-    }
     .active {
         background: transparent;
     }
@@ -681,6 +678,8 @@ footer {
         }
     }
     .projects-single {
+        display: flex;
+        flex-direction: column;
         flex:1;
         top: 112px;
         justify-items: center;
@@ -697,18 +696,26 @@ footer {
         p {
             padding: 2em;
             @include desktop {
-                width: 66%;
+                width: 40%;
                 margin: 0 auto;
             }
         }
         a {
             align-self: center;
-            margin: 2em 0 0 0;
             display: block;
             text-align: center;
         }
         button {
-            margin: 0 0 4em 0;
+            margin: 3em auto;
+            display: block;
+            cursor: pointer;
+        }
+        h2 {
+            @include desktop {
+                width:40%;
+                text-align: start;
+                align-self: center;
+            }
         }
     }
     footer {
