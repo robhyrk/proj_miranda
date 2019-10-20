@@ -41,8 +41,11 @@ jQuery(document).ready(function($){
     });
 
   //loads grid project content on/off
+  
   const $loadBtn = $(".projects button")
-  // $( ".carousel-cell:nth-child(n+7)" ).hide();
+  if ($(window).width() > 1024) {
+    $( ".carousel-cell:nth-child(n+7)" ).hide();
+  }
   $loadBtn.on("click", function() {
     $( ".carousel-cell:nth-child(n+7)" ).slideToggle('slow');
     $loadBtn.html() === 'LOAD MORE' ? $loadBtn.text('SHOW LESS') : $loadBtn.text('LOAD MORE')
